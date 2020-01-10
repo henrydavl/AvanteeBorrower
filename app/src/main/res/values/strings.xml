@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">AvanteeBorrower</string>
+    <string name="app_name">Avantee Borrower</string>
+    <string name="ojk_logo">OJK Logo</string>
+    <string name="ojk_registered">Terdaftar dan diawasi oleh</string>
+    <string name="member_of">Anggota dari</string>
+    <string name="afpi_logo">AFPI Logo</string>
+    <string name="logo">Logo</string>
 </resources>
