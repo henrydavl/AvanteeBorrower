@@ -5,4 +5,23 @@
     <string name="member_of">Anggota dari</string>
     <string name="afpi_logo">AFPI Logo</string>
     <string name="logo">Logo</string>
+    <string name="dummy_heading">Video provides a powerful way to help you prove your point</string>
+    <string name="dummy_text">Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video  that best fits your document that best fits your document.</string>
+    <string name="illustration">illustration</string>
+
+    <string-array name="onboard_heading">
+        <item>Avantee siap menjembatani pemberi dana dan peminjam</item>
+        <item>Suku bunga kompetitif</item>
+        <item>Cepat dan transparan</item>
+        <item>Program referal</item>
+        <item>Penuhi kebutuhan pendanaan Anda bersama kami</item>
+    </string-array>
+
+    <string-array name="onboard_content">
+        <item>Dengan sistem tekfin peer to peer, kami siap menjembatani kebutuhan pendanaan pelaku UKM, sekaligus menjadi sarana pemodalan alternatif bagi para pemberi pinjaman.</item>
+        <item>Suku bunga yang kompetitif sesuai dengan penialian tingkat resiko kredit masing-masing pelaku usaha serta tingkat pendanaan sampai dengan 90%.</item>
+        <item>Dengan sistem tekfin peer to peer dan jangkauan pinjaman secara nasional, memungkinkan proses penggalangan dana pinjaman menjadi jauh lebih cepat, praktis, dan transparan dibanding proses konvensional.</item>
+        <item>Dengan membawa penyandang dana untuk ikut program pendanaan, peminjam dapat mengurangi biaya pinjaman dengan komisi referal.</item>
+        <item> </item>
+    </string-array>
 </resources>
