@@ -8,6 +8,10 @@
     <string name="dummy_heading">Video provides a powerful way to help you prove your point</string>
     <string name="dummy_text">Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video  that best fits your document that best fits your document.</string>
     <string name="illustration">illustration</string>
+    <string name="register">Daftar</string>
+    <string name="login">Masuk</string>
+    <string name="info_heading">Informasi layanan</string>
+    <string name="info_desc">Untuk sementara, layanan akan kami fokuskan kepada peminjam dengan domisili di area Jabodetabek serta memiliki ATM / Mobile / Internet Banking. Silahkan melanjutkan jika Anda memenuhi persyaratan tersebut. Terimkasih karena Anda terlah memilih untuk meminjam di Avantee.</string>
 
     <string-array name="onboard_heading">
         <item>Avantee siap menjembatani pemberi dana dan peminjam</item>

@@ -1,9 +1,12 @@
 package byc.avt.avanteeborrower.adapter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,7 +15,9 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.Objects;
 
+import byc.avt.avanteeborrower.LoginActivity;
 import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.RegisterActivity;
 
 public class OnBoardAdapter extends PagerAdapter {
 
@@ -52,13 +57,40 @@ public class OnBoardAdapter extends PagerAdapter {
         ImageView obImage = view.findViewById(R.id.ob_image);
         TextView obTitle = view.findViewById(R.id.ob_title);
         TextView obDesc = view.findViewById(R.id.ob_desc);
+        Button btnReg = view.findViewById(R.id.ob_btn_reg);
+        Button btnLog = view.findViewById(R.id.ob_btn_log);
 
         obImage.setImageResource(board_images[position]);
         obTitle.setText(board_heading[position]);
-        obDesc.setText(board_desc[position]);
 
+        if (board_desc[position].equals("")){
+            obDesc.setVisibility(View.GONE);
+            btnReg.setVisibility(View.VISIBLE);
+            btnLog.setVisibility(View.VISIBLE);
+        } else {
+            obDesc.setText(board_desc[position]);
+            btnReg.setVisibility(View.GONE);
+            btnLog.setVisibility(View.GONE);
+        }
+
+        btnReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, RegisterActivity.class);
+                context.startActivity(intent);
+                ((Activity)context).finish();
+            }
+        });
+
+        btnLog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, LoginActivity.class);
+                context.startActivity(intent);
+                ((Activity)context).finish();
+            }
+        });
         container.addView(view);
-
         return view;
     }
 
