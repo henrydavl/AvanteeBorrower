@@ -35,7 +35,7 @@ public class OnBoardAdapter extends PagerAdapter {
             R.drawable.ic_walkthough2,
             R.drawable.ic_walkthough3,
             R.drawable.ic_walkthough4,
-            R.drawable.ic_walkthough5
+            R.drawable.ic_illustlogin,
     };
 
     @Override
@@ -78,7 +78,7 @@ public class OnBoardAdapter extends PagerAdapter {
             public void onClick(View view) {
                 Intent intent = new Intent(context, RegisterActivity.class);
                 context.startActivity(intent);
-                ((Activity)context).finish();
+//                ((Activity)context).finish();
             }
         });
 
@@ -87,7 +87,7 @@ public class OnBoardAdapter extends PagerAdapter {
             public void onClick(View view) {
                 Intent intent = new Intent(context, LoginActivity.class);
                 context.startActivity(intent);
-                ((Activity)context).finish();
+//                ((Activity)context).finish();
             }
         });
         container.addView(view);
