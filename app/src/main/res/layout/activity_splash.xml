@@ -23,7 +23,7 @@
         android:layout_marginBottom="16dp"
         android:contentDescription="@string/ojk_logo"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_ojk_logo"
+        app:srcCompat="@drawable/ic_ojk_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent" />

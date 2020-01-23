@@ -19,6 +19,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent onBoard = new Intent(SplashActivity.this, OnBoardingActivity.class);
+                onBoard.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(onBoard);
                 finish();
             }
