@@ -24,7 +24,7 @@ public class OnBoardingActivity extends AppCompatActivity {
         onBoardPager.setAdapter(onBoardAdapter);
     }
 
-    public void addDotsIndicator() {
+    public void dotsIndicator() {
 
     }
 }

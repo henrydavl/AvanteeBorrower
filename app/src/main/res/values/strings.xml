@@ -10,7 +10,15 @@
     <string name="illustration">illustration</string>
     <string name="register">Daftar</string>
     <string name="login">Masuk</string>
+    <string name="nav_dashboard">Dasbor</string>
+    <string name="nav_loan">Pinjaman</string>
+    <string name="nav_notification">Notifikasi</string>
     <string name="info_heading">Informasi layanan</string>
+    <string name="press_exit">Tekan lagi untuk keluar!</string>
+    <string name="message">Pesan</string>
+    <string name="no_message">Tidak ada pesan</string>
+    <string name="information">Info &amp; Penawaran</string>
+    <string name="tagline">Penuhi kebutuhan pendanaan Anda bersama kami</string>
     <string name="info_desc">Untuk sementara, layanan akan kami fokuskan kepada peminjam dengan domisili di area Jabodetabek serta memiliki ATM / Mobile / Internet Banking. Silahkan melanjutkan jika Anda memenuhi persyaratan tersebut. Terimkasih karena Anda terlah memilih untuk meminjam di Avantee.</string>
 
     <string-array name="onboard_heading">
@@ -28,4 +36,7 @@
         <item>Dengan membawa penyandang dana untuk ikut program pendanaan, peminjam dapat mengurangi biaya pinjaman dengan komisi referal.</item>
         <item> </item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

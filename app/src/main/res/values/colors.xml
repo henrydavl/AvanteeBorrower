@@ -6,4 +6,8 @@
     <color name="textColor">#FFFFFF</color>
     <color name="obHeading">#374553</color>
     <color name="obDesc">#80374553</color>
+    <color name="bgView">#F3F3F3</color>
+    <color name="bgNav">#F8F8F8</color>
+    <color name="navInactive">#BEC2C7</color>
+    <color name="tabText">#374553</color>
 </resources>
