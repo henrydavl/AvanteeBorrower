@@ -13,8 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabGravity="fill"
-        app:tabTextColor="@color/tabText"
-        app:tabIndicatorColor="@color/tabText"/>
+        app:tabTextColor="@color/dark"
+        app:tabIndicatorColor="@color/dark"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/notification_viewpager"

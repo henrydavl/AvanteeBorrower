@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="205dp" />
+        app:layout_constraintGuide_begin="196dp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -37,7 +37,7 @@
         android:layout_marginBottom="8dp"
         android:text="@string/ojk_registered"
         android:textAlignment="center"
-        android:textColor="@color/textColor"
+        android:textColor="@color/white"
         android:textSize="13sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -66,7 +66,7 @@
         android:layout_marginEnd="16dp"
         android:text="@string/member_of"
         android:textAlignment="center"
-        android:textColor="@color/textColor"
+        android:textColor="@color/white"
         android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,10 +77,10 @@
         android:id="@+id/imageView2"
         android:layout_width="190dp"
         android:layout_height="65dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_white"
-        android:contentDescription="@string/logo" />
+        app:srcCompat="@drawable/logo_white" />
 </androidx.constraintlayout.widget.ConstraintLayout>
