@@ -18,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent onBoard = new Intent(SplashActivity.this, OnBoardingActivity.class);
+                Intent onBoard = new Intent(SplashActivity.this, NoticeActivity.class);
                 onBoard.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(onBoard);
                 finish();
