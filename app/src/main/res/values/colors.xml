@@ -25,7 +25,7 @@
     <color name="failed">#EB364C</color>
     <color name="dark">#374553</color>
     <color name="white">#FFFFFF</color>
-    <color name="overlay">#CC374553</color>
+    <color name="overlay">#80374553</color>
 
     <!-- Background -->
     <color name="neutral">#F0D2D5DB</color>
