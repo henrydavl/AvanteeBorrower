@@ -1,22 +1,19 @@
 package byc.avt.avanteeborrower;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.android.material.textfield.TextInputEditText;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 
 public class LoginActivity extends AppCompatActivity {
-
-    private ActionBar actionBar;
 
     private TextInputLayout editPhoneNumber, editPassword;
     private Button btnLogin;
@@ -29,14 +26,11 @@ public class LoginActivity extends AppCompatActivity {
         editPhoneNumber = findViewById(R.id.edt_log_phone);
         editPassword = findViewById(R.id.edt_log_password);
         btnLogin = findViewById(R.id.btn_login);
-        actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setElevation(0);
-            actionBar.setHomeAsUpIndicator(R.drawable.ic_back_24px);
-            actionBar.setHomeButtonEnabled(true);
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle("");
-        }
+        Toolbar bar = findViewById(R.id.login_toolbar);
+        setSupportActionBar(bar);
+        Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.ic_back_24px);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Objects.requireNonNull(editPhoneNumber.getEditText()).addTextChangedListener(loginTextWatcher);
         Objects.requireNonNull(editPassword.getEditText()).addTextChangedListener(loginTextWatcher);
     }
