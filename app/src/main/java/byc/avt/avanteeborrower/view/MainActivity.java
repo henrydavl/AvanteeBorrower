@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower;
+package byc.avt.avanteeborrower.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -13,9 +13,10 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import byc.avt.avanteeborrower.fragment.DashboardFragment;
-import byc.avt.avanteeborrower.fragment.LoanFragment;
-import byc.avt.avanteeborrower.fragment.NotificationFragment;
+import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.view.fragment.DashboardFragment;
+import byc.avt.avanteeborrower.view.fragment.LoanFragment;
+import byc.avt.avanteeborrower.view.fragment.NotificationFragment;
 
 public class MainActivity extends AppCompatActivity {
 

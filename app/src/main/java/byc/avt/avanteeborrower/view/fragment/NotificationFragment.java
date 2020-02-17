@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower.fragment;
+package byc.avt.avanteeborrower.view.fragment;
 
 
 import android.graphics.Color;
@@ -17,8 +17,8 @@ import com.google.android.material.tabs.TabLayout;
 
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.adapter.ViewPagerAdapter;
-import byc.avt.avanteeborrower.fragment.notification.InfoFragment;
-import byc.avt.avanteeborrower.fragment.notification.MessageFragment;
+import byc.avt.avanteeborrower.view.fragment.notification.InfoFragment;
+import byc.avt.avanteeborrower.view.fragment.notification.MessageFragment;
 
 /**
  * A simple {@link Fragment} subclass.

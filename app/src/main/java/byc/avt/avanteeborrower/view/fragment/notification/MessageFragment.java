@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower.fragment.notification;
+package byc.avt.avanteeborrower.view.fragment.notification;
 
 
 import android.os.Bundle;
@@ -14,10 +14,10 @@ import byc.avt.avanteeborrower.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class InfoFragment extends Fragment {
+public class MessageFragment extends Fragment {
 
 
-    public InfoFragment() {
+    public MessageFragment() {
         // Required empty public constructor
     }
 
@@ -25,7 +25,8 @@ public class InfoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_info, container, false);
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_message, container, false);
     }
 
 }

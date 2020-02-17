@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower;
+package byc.avt.avanteeborrower.view;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -13,11 +13,12 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 
+import byc.avt.avanteeborrower.R;
+
 public class LoginActivity extends AppCompatActivity {
 
     private TextInputLayout editPhoneNumber, editPassword;
     private Button btnLogin;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
