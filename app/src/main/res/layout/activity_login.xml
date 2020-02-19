@@ -13,12 +13,25 @@
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="128dp"
+            android:layout_height="96dp"
             android:fitsSystemWindows="true"
+            android:theme="@style/ToolbarTheme"
+            app:expandedTitleMargin="16dp"
+            app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:expandedTitleTextAppearance="@color/dark">
 
-            <include layout="@layout/toolbar_layout"/>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/login_toolbar"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:elevation="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:title="@string/login"
+                app:titleTextAppearance="@style/ToolbarTheme"
+                app:titleTextColor="@color/dark" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -78,7 +91,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/tv_forgot_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -86,6 +99,23 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/edt_log_password"
+                app:layout_constraintTop_toBottomOf="@+id/edt_log_password" />
+
+            <CheckBox
+                android:id="@+id/cb_remember_me"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:button="@drawable/checkbox_selector"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/ibm_plex_sans"
+                android:text="@string/remember_me"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_forgot_password"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edt_log_password" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

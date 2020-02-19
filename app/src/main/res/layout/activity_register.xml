@@ -14,8 +14,11 @@
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="128dp"
+            android:layout_height="96dp"
             android:fitsSystemWindows="true"
+            android:theme="@style/ToolbarTheme"
+            app:expandedTitleMargin="16dp"
+            app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
             app:expandedTitleTextAppearance="@color/dark"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
@@ -28,8 +31,8 @@
                 app:contentInsetStart="0dp"
                 app:layout_collapseMode="pin"
                 app:title="@string/register"
-                app:titleTextColor="@color/dark"
-                app:titleTextAppearance="@style/ToolbarTheme" />
+                app:titleTextAppearance="@style/ToolbarTheme"
+                app:titleTextColor="@color/dark" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 

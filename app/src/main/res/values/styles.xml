@@ -49,6 +49,12 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
+    <style name="CheckboxTheme" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/ibm_plex_sans</item>
+        <item name="android:textColorSecondary">@color/dark</item>
+    </style>
+
     <style name="BottomNavigationViewStyle">
         <item name="android:textAllCaps">true</item>
         <item name="android:textSize">11sp</item>
