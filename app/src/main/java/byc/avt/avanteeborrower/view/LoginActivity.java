@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         editPhoneNumber = findViewById(R.id.edt_log_phone);
         editPassword = findViewById(R.id.edt_log_password);
         btnLogin = findViewById(R.id.btn_login);
-        Toolbar bar = findViewById(R.id.login_toolbar);
+        Toolbar bar = findViewById(R.id.toolbar_login);
         setSupportActionBar(bar);
         Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.ic_back_24px);
         getSupportActionBar().setHomeButtonEnabled(true);

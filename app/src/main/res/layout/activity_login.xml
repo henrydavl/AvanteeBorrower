@@ -22,7 +22,7 @@
             app:expandedTitleTextAppearance="@color/dark">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/login_toolbar"
+                android:id="@+id/toolbar_login"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_width="match_parent"
                 android:elevation="0dp"

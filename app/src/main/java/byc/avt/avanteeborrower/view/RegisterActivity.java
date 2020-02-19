@@ -5,6 +5,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,7 @@ import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.model.User;
+import byc.avt.avanteeborrower.view.misc.TermFragment;
 import byc.avt.avanteeborrower.viewmodel.AuthenticationViewModel;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -25,6 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
     private TextInputLayout editPhoneNumber, editPassword, edtEmail, edtRefId, edtConfirmPassword;
     private String phoneNumber, password, rePassword;
     private Button btnRegister;
+    private CheckBox checkAgree;
     private AuthenticationViewModel viewModel;
 
     @Override
@@ -37,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         edtConfirmPassword = findViewById(R.id.edt_reg_re_password);
         edtRefId = findViewById(R.id.edt_reg_ref_id);
         btnRegister = findViewById(R.id.btn_register);
+        checkAgree = findViewById(R.id.cb_remember_me);
         Toolbar bar = findViewById(R.id.register_toolbar);
         setSupportActionBar(bar);
         viewModel = ViewModelProviders.of(this).get(AuthenticationViewModel.class);
@@ -45,7 +49,17 @@ public class RegisterActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Objects.requireNonNull(editPhoneNumber.getEditText()).addTextChangedListener(registerTextWatcher);
         Objects.requireNonNull(editPassword.getEditText()).addTextChangedListener(registerTextWatcher);
+        checkAgree.setOnClickListener(showTermListener);
     }
+
+    private View.OnClickListener showTermListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            TermFragment termFragment = TermFragment.getInstance();
+            termFragment.show(getSupportFragmentManager(), termFragment.getTag());
+        }
+    };
+
 
     private TextWatcher registerTextWatcher = new TextWatcher() {
         @Override
