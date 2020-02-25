@@ -15,8 +15,8 @@
     <string name="terms_and_condition">Syarat &amp; Ketentuan Avantee</string>
     <string name="register_as_borrower">Daftar sebagai peminjam</string>
     <string name="otp_verification">Verifikasi OTP</string>
-    <string name="otp_desc">Masukkan kode verifikasi yang telah dikirimkan melalui SMS ke </string>
-    <string name="resend_in">Kirim ulang kode dalam </string>
+    <string name="otp_desc">Masukkan kode verifikasi yang telah dikirimkan melalui SMS ke&#160;</string>
+    <string name="resend_in">Kirim ulang kode dalam&#160;</string>
     <string name="register_success">Pendaftaran berhasil</string>
     <string name="register_success_message">Akun berhasil didaftarkan sebagai peminjam di Avantee. Silakan masuk kembali menggunakan nomor handphone dan kata sandi Anda.</string>
     <string name="register_complete">Pendaftaran selesai</string>

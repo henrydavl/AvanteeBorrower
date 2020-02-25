@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edt_otp_code"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_otp_sent_to" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/tv_countdown"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -82,7 +82,7 @@
         android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_otp_code" />
 
     <Button
         android:id="@+id/btn_verify"

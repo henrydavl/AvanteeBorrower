@@ -1,5 +1,6 @@
 package byc.avt.avanteeborrower.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -21,12 +22,12 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 import java.util.Timer;
-import java.util.TimerTask;
 import java.util.regex.Pattern;
 
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.model.User;
-import byc.avt.avanteeborrower.view.misc.TermFragment;
+import byc.avt.avanteeborrower.view.misc.OTPActivity;
+import byc.avt.avanteeborrower.view.sheet.TermFragment;
 import byc.avt.avanteeborrower.viewmodel.AuthenticationViewModel;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -38,6 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
     private AuthenticationViewModel viewModel;
     private Boolean checkInput = false, readTerm = false;
     private Timer timer;
+    private User user;
     private static final Pattern PASSWORD_PATTERN = Pattern.compile("^" +
             "(?=.*[0-9])" +         //at least has 1 number
             "(?=.*[a-z])" +         //at least has 1 lower case letter
@@ -180,7 +182,7 @@ public class RegisterActivity extends AppCompatActivity {
                 return;
             }
             // POST to server through endpoint
-            User user = new User();
+            user = new User();
             user.setEmail(email);
             user.setPassword(password);
             user.setPhoneNumber(phoneNumber);
@@ -195,6 +197,9 @@ public class RegisterActivity extends AppCompatActivity {
             if (aBoolean) {
                 showMessage("Success");
                 //intent to sms verification
+                Intent otp = new Intent(RegisterActivity.this, OTPActivity.class);
+                otp.putExtra(OTPActivity.NEW_USER, user);
+                startActivity(otp);
             } else {
                 showMessage("failed");
             }
