@@ -17,6 +17,7 @@ import java.util.Objects;
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.view.LoginActivity;
 import byc.avt.avanteeborrower.view.RegisterActivity;
+import byc.avt.avanteeborrower.view.RegistrationFormActivity;
 
 public class OnBoardAdapter extends PagerAdapter {
 
@@ -75,7 +76,7 @@ public class OnBoardAdapter extends PagerAdapter {
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, RegisterActivity.class);
+                Intent intent = new Intent(context, RegistrationFormActivity.class);
                 context.startActivity(intent);
             }
         });

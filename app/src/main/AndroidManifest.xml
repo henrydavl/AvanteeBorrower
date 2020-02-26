@@ -22,7 +22,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.misc.OTPActivity"></activity>
+        <activity android:name=".view.RegistrationFormActivity"></activity>
+        <activity android:name=".view.misc.OTPActivity" />
         <activity
             android:name=".intro.NoticeActivity"
             android:theme="@style/OnBoardTheme" />

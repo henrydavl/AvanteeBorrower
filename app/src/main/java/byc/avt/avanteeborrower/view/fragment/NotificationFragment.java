@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import com.google.android.material.tabs.TabLayout;
 
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.adapter.ViewPagerAdapter;
+import byc.avt.avanteeborrower.adapter.NotificationFragmentAdapter;
 import byc.avt.avanteeborrower.view.fragment.notification.InfoFragment;
 import byc.avt.avanteeborrower.view.fragment.notification.MessageFragment;
 
@@ -42,7 +42,7 @@ public class NotificationFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         TabLayout tabLayout = view.findViewById(R.id.tab_notification);
         ViewPager nViewPager = view.findViewById(R.id.notification_viewpager);
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
+        NotificationFragmentAdapter adapter = new NotificationFragmentAdapter(getChildFragmentManager());
         adapter.addFragment(new MessageFragment(), getString(R.string.message));
         adapter.addFragment(new InfoFragment(), getString(R.string.information));
         nViewPager.setAdapter(adapter);

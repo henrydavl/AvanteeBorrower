@@ -7,12 +7,12 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import java.util.ArrayList;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class NotificationFragmentAdapter extends FragmentPagerAdapter {
 
     private final ArrayList<Fragment> fragments = new ArrayList<>();
     private final ArrayList<String> fragmentTitle = new ArrayList<>();
 
-    public ViewPagerAdapter(FragmentManager fm) {
+    public NotificationFragmentAdapter(FragmentManager fm) {
         super(fm);
     }
 
