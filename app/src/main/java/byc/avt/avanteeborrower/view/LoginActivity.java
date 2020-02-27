@@ -3,9 +3,11 @@ package byc.avt.avanteeborrower.view;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -14,6 +16,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.view.sheet.TermFragment;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -83,5 +86,14 @@ public class LoginActivity extends AppCompatActivity {
         if (validatePassword() | validatePassword()) {
 
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
