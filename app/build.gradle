@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'androidx.navigation.safeargs'
 
 android {
     compileSdkVersion 29
@@ -11,6 +12,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         android.defaultConfig.vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
         buildConfigField "String", "BASE_URL", '"https://api.themoviedb.org/3/"'
         buildConfigField "String", "BASE_IMAGE_URL", '"https://image.tmdb.org/t/p/w500/"'
         buildConfigField "String", "API_KEY", '"68eff651539ae197e48884a6d31d2059"'
@@ -21,7 +23,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding.enabled = true
 }
+
+def butterKnifeVersion = '10.1.0'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -37,6 +46,8 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     implementation 'com.loopj.android:android-async-http:1.4.10'
     implementation 'me.dm7.barcodescanner:zxing:1.9'
+    annotationProcessor "com.jakewharton:butterknife:$butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
 
     //Firebase
     implementation 'com.google.firebase:firebase-analytics:17.2.2'
