@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ToolbarTheme"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        android:theme="@style/ToolbarTheme">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
@@ -17,14 +17,14 @@
             android:fitsSystemWindows="true"
             android:theme="@style/ToolbarTheme"
             app:expandedTitleMargin="16dp"
-            app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
+            app:expandedTitleTextAppearance="@color/dark"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:expandedTitleTextAppearance="@color/dark">
+            app:layout_scrollInterpolator="@android:anim/decelerate_interpolator">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar_login"
-                android:layout_height="?attr/actionBarSize"
                 android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
                 android:elevation="0dp"
                 app:contentInsetLeft="0dp"
                 app:contentInsetStart="0dp"
@@ -76,11 +76,11 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 app:errorEnabled="true"
-                app:passwordToggleTint="@color/gray2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edt_log_phone"
-                app:passwordToggleEnabled="true">
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/gray2">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -109,10 +109,10 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="32dp"
                 android:button="@drawable/checkbox_selector"
-                android:padding="5dp"
-                android:textSize="16sp"
                 android:fontFamily="@font/ibm_plex_sans"
+                android:padding="5dp"
                 android:text="@string/remember_me"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/tv_forgot_password"
                 app:layout_constraintStart_toStartOf="parent"
@@ -133,10 +133,10 @@
         android:background="@drawable/button_state_selector"
         android:enabled="false"
         android:letterSpacing="0.01"
+        android:onClick="confirmInput"
         android:text="@string/login_as_borrower"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:onClick="confirmInput"
         android:textSize="16sp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
