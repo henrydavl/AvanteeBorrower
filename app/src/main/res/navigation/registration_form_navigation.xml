@@ -1,6 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/registration_form_navigation">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registration_form_navigation"
+    app:startDestination="@id/welcomeFragment">
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="byc.avt.avanteeborrower.view.fragment.registration.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_begin"
+            app:destination="@id/personalDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalDataFragment"
+        android:name="byc.avt.avanteeborrower.view.fragment.registration.PersonalDataFragment"
+        android:label="fragment_personal_data"
+        tools:layout="@layout/fragment_personal_data" >
+        <action
+            android:id="@+id/actionWelcome"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/actionWorkInfo"
+            app:destination="@id/workInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workInfoFragment"
+        android:name="byc.avt.avanteeborrower.view.fragment.registration.WorkInfoFragment"
+        android:label="fragment_work_info"
+        tools:layout="@layout/fragment_work_info" >
+        <action
+            android:id="@+id/actionPersonalData"
+            app:destination="@id/personalDataFragment" />
+        <action
+            android:id="@+id/actionAddress"
+            app:destination="@id/addressDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addressDataFragment"
+        android:name="byc.avt.avanteeborrower.view.fragment.registration.AddressDataFragment"
+        android:label="fragment_address_data"
+        tools:layout="@layout/fragment_address_data" >
+        <action
+            android:id="@+id/actionBackToWork"
+            app:destination="@id/workInfoFragment" />
+        <action
+            android:id="@+id/actionOtherFamily"
+            app:destination="@id/otherFamilyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otherFamilyFragment"
+        android:name="byc.avt.avanteeborrower.view.fragment.registration.OtherFamilyFragment"
+        android:label="fragment_other_family"
+        tools:layout="@layout/fragment_other_family" >
+        <action
+            android:id="@+id/actionBackToAddress"
+            app:destination="@id/addressDataFragment" />
+        <action
+            android:id="@+id/actionBankInfo"
+            app:destination="@id/bankInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bankInfoFragment"
+        android:name="byc.avt.avanteeborrower.view.fragment.registration.BankInfoFragment"
+        android:label="fragment_bank_info"
+        tools:layout="@layout/fragment_bank_info" >
+        <action
+            android:id="@+id/actionDocument"
+            app:destination="@id/documentFragment" />
+        <action
+            android:id="@+id/actionBackToFamily"
+            app:destination="@id/otherFamilyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/documentFragment"
+        android:name="byc.avt.avanteeborrower.view.fragment.registration.DocumentFragment"
+        android:label="fragment_document"
+        tools:layout="@layout/fragment_document" >
+        <action
+            android:id="@+id/actionBackToBank"
+            app:destination="@id/bankInfoFragment" />
+    </fragment>
 </navigation>

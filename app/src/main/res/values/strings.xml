@@ -37,9 +37,12 @@
     <!-- TODO: New User Get Started Screen -->
     <string name="welcome_message">Selamat bergabung menjadi peminjam di Avantee</string>
     <string name="new_user_form_desc">Bantu kami untuk mengenal Anda lebih baik melalui pengisian data dan dokumen. Avantee menjamin kerahasiaan informasi yang Anda berikan.</string>
-    <string name="fill_form">Isi formulir</string>
-    <string name="document_picture">Foto dokumen</string>
-    <string name="wait_verification">Tunggu verifikasi</string>
+    <string name="fill_form">Isi\nformulir</string>
+    <string name="document_picture">Foto\ndokumen</string>
+    <string name="wait_verification">Tunggu\nverifikasi</string>
+    <string name="start_filling_forms">Mulai pengisisan formulir</string>
+
+    <!-- TODO: Verification Status -->
     <string name="under_verification">Akun dalam verifikasi</string>
     <string name="under_verification_message">Persetujuan memerlukan waktu hingga 24 jam. Kami akan memberi kabar via SMS. jangan keluar atau menghapus aplikasi ini.</string>
 
