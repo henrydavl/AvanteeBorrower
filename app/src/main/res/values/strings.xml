@@ -37,7 +37,7 @@
     <!-- TODO: New User Get Started Screen -->
     <string name="welcome_message">Selamat bergabung menjadi peminjam di Avantee</string>
     <string name="new_user_form_desc">Bantu kami untuk mengenal Anda lebih baik melalui pengisian data dan dokumen. Avantee menjamin kerahasiaan informasi yang Anda berikan.</string>
-    <string name="fill_form">Isi formulis</string>
+    <string name="fill_form">Isi formulir</string>
     <string name="document_picture">Foto dokumen</string>
     <string name="wait_verification">Tunggu verifikasi</string>
     <string name="under_verification">Akun dalam verifikasi</string>
