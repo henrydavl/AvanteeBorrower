@@ -22,6 +22,7 @@ import byc.avt.avanteeborrower.R;
 public class PersonalDataFragment extends Fragment {
 
     private Button next;
+    private String[] gender = {"Laki - laki", "Perempuan"};
 
     public PersonalDataFragment() {
         // Required empty public constructor
@@ -37,7 +38,8 @@ public class PersonalDataFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back_24px);
+//        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(getString(R.string.personal_data));
+//        ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back_24px);
         next = view.findViewById(R.id.btn_next_personal_info);
         next.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -24,8 +24,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".view.CameraActivity"></activity>
         <activity
-            android:name=".view.RegistrationFormActivity"
-            android:theme="@style/AppThemeWithActionBar" />
+            android:name=".view.RegistrationFormActivity" />
         <activity android:name=".view.misc.OTPActivity" />
         <activity
             android:name=".intro.NoticeActivity"
