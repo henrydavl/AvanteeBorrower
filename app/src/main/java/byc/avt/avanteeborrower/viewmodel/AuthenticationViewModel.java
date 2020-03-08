@@ -1,5 +1,6 @@
 package byc.avt.avanteeborrower.viewmodel;
 
+import android.content.Context;
 import android.os.Build;
 
 import androidx.lifecycle.LiveData;
@@ -8,16 +9,21 @@ import androidx.lifecycle.ViewModel;
 
 import byc.avt.avanteeborrower.BuildConfig;
 import byc.avt.avanteeborrower.model.User;
+import byc.avt.avanteeborrower.repository.AuthRepository;
 
 public class AuthenticationViewModel extends ViewModel {
-    private MutableLiveData<Boolean> isSuccess = new MutableLiveData<>();
+    private MutableLiveData<String> isSuccess = new MutableLiveData<>();
+    private AuthRepository authRepository;
 
-
-    public void register(User user, String ref_id){
-        isSuccess.setValue(true);
+    public AuthenticationViewModel() {
+        authRepository = AuthRepository.getInstance();
     }
 
-    public LiveData<Boolean> getStatus(){
+    public void register(User user){
+        isSuccess = authRepository.register(user);
+    }
+
+    public LiveData<String> getStatus(){
         return isSuccess;
     }
 }

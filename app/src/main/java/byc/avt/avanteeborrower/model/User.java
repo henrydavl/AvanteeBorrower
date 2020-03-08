@@ -4,11 +4,19 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class User implements Parcelable {
-    private String phoneNumber, email, password;
+    private String phoneNumber, email, password, ref_code;
     private int user_id;
 
     public User() {
 
+    }
+
+    public String getRef_code() {
+        return ref_code;
+    }
+
+    public void setRef_code(String ref_code) {
+        this.ref_code = ref_code;
     }
 
     public String getPhoneNumber() {
@@ -53,6 +61,7 @@ public class User implements Parcelable {
         dest.writeString(this.phoneNumber);
         dest.writeString(this.email);
         dest.writeString(this.password);
+        dest.writeString(this.ref_code);
         dest.writeInt(this.user_id);
     }
 
@@ -60,6 +69,7 @@ public class User implements Parcelable {
         this.phoneNumber = in.readString();
         this.email = in.readString();
         this.password = in.readString();
+        this.ref_code = in.readString();
         this.user_id = in.readInt();
     }
 

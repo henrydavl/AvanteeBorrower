@@ -1,11 +1,13 @@
 package byc.avt.avanteeborrower.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +18,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.view.misc.ForgotPasswordActivity;
 import byc.avt.avanteeborrower.view.sheet.TermFragment;
 
 public class LoginActivity extends AppCompatActivity {
@@ -30,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         editPhoneNumber = findViewById(R.id.edt_log_phone);
         editPassword = findViewById(R.id.edt_log_password);
         btnLogin = findViewById(R.id.btn_login);
+        TextView tvForgotPassword = findViewById(R.id.tv_forgot_password);
         Toolbar bar = findViewById(R.id.toolbar_login);
         setSupportActionBar(bar);
         Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.ic_back_24px);
@@ -37,6 +41,13 @@ public class LoginActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Objects.requireNonNull(editPhoneNumber.getEditText()).addTextChangedListener(loginTextWatcher);
         Objects.requireNonNull(editPassword.getEditText()).addTextChangedListener(loginTextWatcher);
+        tvForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private TextWatcher loginTextWatcher = new TextWatcher() {

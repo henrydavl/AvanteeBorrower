@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.helper.PrefManager;
 
 public class NoticeActivity extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class NoticeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_notice);
         Button btnClose = findViewById(R.id.btn_close);
         Button btnUnderstand = findViewById(R.id.btn_understand);
+        PrefManager pref = new PrefManager(this);
 
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +34,7 @@ public class NoticeActivity extends AppCompatActivity {
         btnUnderstand.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                pref.setOnBoarding(true);
                 Intent intent = new Intent(NoticeActivity.this, OnBoardingActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

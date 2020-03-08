@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -34,6 +35,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private TextInputLayout editPhoneNumber, editPassword, edtEmail, edtRefId, edtConfirmPassword;
     private String phoneNumber, password, rePassword;
+    private ProgressBar pbRegister;
     private Button btnRegister;
     private CheckBox checkAgree;
     private AuthenticationViewModel viewModel;
@@ -61,6 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
         edtRefId = findViewById(R.id.edt_reg_ref_id);
         btnRegister = findViewById(R.id.btn_register);
         checkAgree = findViewById(R.id.cb_remember_me);
+        pbRegister = findViewById(R.id.pb_register);
         Toolbar bar = findViewById(R.id.register_toolbar);
         setSupportActionBar(bar);
         viewModel = ViewModelProviders.of(this).get(AuthenticationViewModel.class);
@@ -70,6 +73,13 @@ public class RegisterActivity extends AppCompatActivity {
         Objects.requireNonNull(editPhoneNumber.getEditText()).addTextChangedListener(registerTextWatcher);
         Objects.requireNonNull(editPassword.getEditText()).addTextChangedListener(registerTextWatcher);
         checkAgree.setOnCheckedChangeListener(showTermListener);
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showLoading(true);
+                confirmInput();
+            }
+        });
     }
 
 
@@ -169,7 +179,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
-    public void confirmInput(View v) {
+    public void confirmInput() {
         phoneNumber = editPhoneNumber.getEditText().getText().toString().trim();
         String email = Objects.requireNonNull(edtEmail.getEditText()).getText().toString().trim();
         String ref_id = Objects.requireNonNull(edtRefId.getEditText()).getText().toString().trim();
@@ -186,22 +196,24 @@ public class RegisterActivity extends AppCompatActivity {
             user.setEmail(email);
             user.setPassword(password);
             user.setPhoneNumber(phoneNumber);
-            viewModel.register(user, ref_id);
+            user.setRef_code(ref_id);
+            viewModel.register(user);
             viewModel.getStatus().observe(this, checkStatus);
         }
     }
 
-    private Observer<Boolean> checkStatus = new Observer<Boolean>() {
+    private Observer<String> checkStatus = new Observer<String>() {
         @Override
-        public void onChanged(Boolean aBoolean) {
-            if (aBoolean) {
+        public void onChanged(String s) {
+            if (s.equals("ok")) {
                 showMessage("Success");
+                showLoading(false);
                 //intent to sms verification
                 Intent otp = new Intent(RegisterActivity.this, OTPActivity.class);
                 otp.putExtra(OTPActivity.NEW_USER, user);
                 startActivity(otp);
             } else {
-                showMessage("failed");
+                showMessage("Failed");
             }
         }
     };
@@ -221,5 +233,15 @@ public class RegisterActivity extends AppCompatActivity {
             }
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void showLoading(Boolean loading) {
+        if (loading){
+            btnRegister.setVisibility(View.INVISIBLE);
+            pbRegister.setVisibility(View.VISIBLE);
+        } else {
+            pbRegister.setVisibility(View.INVISIBLE);
+            btnRegister.setVisibility(View.VISIBLE);
+        }
     }
 }

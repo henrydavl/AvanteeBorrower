@@ -12,12 +12,14 @@ import android.widget.TextView;
 
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.adapter.OnBoardAdapter;
+import byc.avt.avanteeborrower.helper.PrefManager;
 
 public class OnBoardingActivity extends AppCompatActivity {
 
     private LinearLayout onBoardDots;
     private Button btnSkip;
     private String[] board_heading;
+    public static final String notFirstTime = "notFirstTime";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,14 @@ public class OnBoardingActivity extends AppCompatActivity {
         onBoardPager.setAdapter(onBoardAdapter);
         dotsIndicator(0);
         onBoardPager.addOnPageChangeListener(listener);
+
+        if (getIntent().getBooleanExtra(notFirstTime, false)){
+            boolean check = getIntent().getBooleanExtra(notFirstTime, false);
+            if (check){
+                onBoardPager.setCurrentItem(board_heading.length);
+            }
+        }
+
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

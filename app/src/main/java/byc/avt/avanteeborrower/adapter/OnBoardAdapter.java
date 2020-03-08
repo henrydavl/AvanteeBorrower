@@ -76,7 +76,7 @@ public class OnBoardAdapter extends PagerAdapter {
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, RegistrationFormActivity.class);
+                Intent intent = new Intent(context, RegisterActivity.class);
                 context.startActivity(intent);
             }
         });
