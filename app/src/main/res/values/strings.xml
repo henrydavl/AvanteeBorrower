@@ -172,6 +172,21 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- TODO: Settings -->
+    <string name="account_settings">Pengaturan Akun </string>
+    <string name="faq">FAQ</string>
+    <string name="term_and_condition">Syarat dan ketentuan</string>
+    <string name="risk_info">Informasi Resiko</string>
+    <string name="logout">Keluar</string>
+
+    <!-- TODO: Account settings -->
+    <string name="change_password">Ubah kata sandi</string>
+    <string name="old_password">Kata sandi lama</string>
+    <string name="new_password">Kata sandi baru</string>
+    <string name="retype_new_password">Ulangi kata sandi baru</string>
+    <string name="save_new_password">Simpan kata sandi baru</string>
+    <!-- TODO: use these string => personal_data, work_info, addresses, other_family_member, bank_info, essential_document -->
+
     <!-- TODO: Misc -->
     <string name="terms_and_conditions"><b>SYARAT DAN KETENTUAN UMUM</b>\n\nDengan mengakses Situs Webs ini Anda setuju untuk terikat pada segala syarat dan ketentuan yang berhubungan dengan Situs Web ini dan materi apapun yang terkandung di dalamnya. Avantee memiliki hak untuk mengganti syarat dan ketentuan pada poin-point tertentu pada syarat dan ketentuan ini (apabila perlu) tanpa kewajiban untuk melakukan pemberitahuan terlebih dahulu.\n\nApabila Anda melanjutkan penggunaan dan akses pada Situs Web ini, Anda dianggap telah menerima dan menyetujui segala persyarat ini dan perubahan yang dilakukan. Apabila Anda tidak setuju dengan syarat dan ketentuan ini, silahkan meninggalkan Situs Web ini segera.
         \n\n<b>PENERAPAN PERSYARATAN</b>\nPersyaratan ini berlaku untuk setiap penggunaan Situs Web dan dengan mengakses dan menggunakan Situs Web maka : Anda setuju terhadap persyaratan ini; dan Ketika Anda mengakses dan menggunakan Situs Web ini untuk dan atas nama orang lain atau perusahaan (“pihak lain”), Anda telah mengkonfirmasi bahwa Anda berwenang untuk mewakili dan pada kenyataannya juga telah menyetujui persyaratan ini atas nama pihak lain yang Anda wakilkan tersebut. Pihak lain yang Anda wakilkan juga menjadi terikat untuk setuju pada persyaratan ini. Jika Anda tidak menyetujui Persyaratan ini, atau Anda tidak berwenang mengakses dan menggunakan Situs Web ini, dan Anda harus segera berhenti mengakses Situs Web ini.
@@ -193,4 +208,5 @@
     <string name="account_foto_tips">Untuk mempercepat proses verifikasi identitas Anda, mohon mengambil foto halaman depan buku rekening atau rekening koran seperti contoh berikut:</string>
     <string name="account_book">Buku rekening</string>
     <string name="current_account">Rekening koran</string>
+    <string name="dummy_ver">Versi 1.0.0</string>
 </resources>
