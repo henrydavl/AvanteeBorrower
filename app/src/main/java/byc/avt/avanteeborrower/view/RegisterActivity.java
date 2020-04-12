@@ -192,11 +192,7 @@ public class RegisterActivity extends AppCompatActivity {
                 return;
             }
             // POST to server through endpoint
-            user = new User();
-            user.setEmail(email);
-            user.setPassword(password);
-            user.setPhoneNumber(phoneNumber);
-            user.setRef_code(ref_id);
+            user = new User(phoneNumber, email, password, ref_id);
             viewModel.register(user);
             viewModel.getStatus().observe(this, checkStatus);
         }

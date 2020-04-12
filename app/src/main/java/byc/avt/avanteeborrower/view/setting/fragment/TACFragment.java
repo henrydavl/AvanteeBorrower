@@ -1,4 +1,4 @@
- package byc.avt.avanteeborrower.setting.fragment;
+package byc.avt.avanteeborrower.view.setting.fragment;
 
 import android.os.Bundle;
 
@@ -13,9 +13,9 @@ import byc.avt.avanteeborrower.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FAQFragment extends Fragment {
+public class TACFragment extends Fragment {
 
-    public FAQFragment() {
+    public TACFragment() {
         // Required empty public constructor
     }
 
@@ -24,6 +24,6 @@ public class FAQFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_f_a_q, container, false);
+        return inflater.inflate(R.layout.fragment_t_a_c, container, false);
     }
 }

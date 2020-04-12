@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".setting.fragment.TACFragment">
+    tools:context=".view.setting.fragment.TACFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

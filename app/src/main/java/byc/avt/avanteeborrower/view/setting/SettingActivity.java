@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower.setting;
+package byc.avt.avanteeborrower.view.setting;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,8 +17,6 @@ import byc.avt.avanteeborrower.R;
 
 public class SettingActivity extends AppCompatActivity implements View.OnClickListener {
 
-    CardView cvAccountSetting, cvFAQ, cvTerms, cvRisk, cvLogout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,11 +29,11 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        cvAccountSetting = findViewById(R.id.cv_account_setting);
-        cvFAQ = findViewById(R.id.cv_faq);
-        cvTerms = findViewById(R.id.cv_terms);
-        cvRisk = findViewById(R.id.cv_risk_info);
-        cvLogout = findViewById(R.id.cv_logout); // logout button
+        CardView cvAccountSetting = findViewById(R.id.cv_account_setting);
+        CardView cvFAQ = findViewById(R.id.cv_faq);
+        CardView cvTerms = findViewById(R.id.cv_terms);
+        CardView cvRisk = findViewById(R.id.cv_risk_info);
+        CardView cvLogout = findViewById(R.id.cv_logout); // logout button
 
         cvAccountSetting.setOnClickListener(this);
         cvFAQ.setOnClickListener(this);

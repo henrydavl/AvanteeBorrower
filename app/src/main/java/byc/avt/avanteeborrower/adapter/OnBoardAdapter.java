@@ -15,10 +15,8 @@ import androidx.viewpager.widget.PagerAdapter;
 import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.setting.SettingActivity;
-import byc.avt.avanteeborrower.view.LoginActivity;
+import byc.avt.avanteeborrower.view.setting.SettingActivity;
 import byc.avt.avanteeborrower.view.RegisterActivity;
-import byc.avt.avanteeborrower.view.RegistrationFormActivity;
 
 public class OnBoardAdapter extends PagerAdapter {
 

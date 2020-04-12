@@ -11,6 +11,13 @@ public class User implements Parcelable {
 
     }
 
+    public User(String phoneNumber, String email, String password, String ref_code) {
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.password = password;
+        this.ref_code = ref_code;
+    }
+
     public String getRef_code() {
         return ref_code;
     }
