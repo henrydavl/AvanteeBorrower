@@ -1,16 +1,22 @@
 package byc.avt.avanteeborrower.view.setting;
 
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.Toast;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.Objects;
 
@@ -38,6 +44,12 @@ public class SettingAccountActivity extends AppCompatActivity implements View.On
         CardView cvBankInfo = findViewById(R.id.cv_bank_info);
         CardView cvEssDoc = findViewById(R.id.cv_ess_doc);
         ImageView imgProfile = findViewById(R.id.img_profile_picture);
+        ImageView editCircle = findViewById(R.id.img_edit_circle);
+        TextView tvInitials = findViewById(R.id.tv_initial2);
+
+        String name = "Henry David Lie";
+        String letter = String.valueOf(name.charAt(0));
+        tvInitials.setText(letter);
 
         cvChangePassword.setOnClickListener(this);
         cvPersonalData.setOnClickListener(this);
@@ -47,6 +59,7 @@ public class SettingAccountActivity extends AppCompatActivity implements View.On
         cvBankInfo.setOnClickListener(this);
         cvEssDoc.setOnClickListener(this);
         imgProfile.setOnClickListener(this);
+        editCircle.setOnClickListener(this);
     }
 
     @Override
@@ -54,7 +67,15 @@ public class SettingAccountActivity extends AppCompatActivity implements View.On
         Intent intent;
         switch (view.getId()){
             case R.id.img_profile_picture:
-                //display bottom sheet
+            case R.id.img_edit_circle:
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(SettingAccountActivity.this, R.style.BottomSheetDialogTheme);
+                View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.sheet_profile_edit, findViewById(R.id.btSheet_profPic));
+                bottomSheetView.findViewById(R.id.btn_take_profile_picture).setOnClickListener(view1 -> {
+                    showMessage("Take picture");
+                    bottomSheetDialog.dismiss();
+                });
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
                 break;
             case R.id.cv_change_password:
                 intent = new Intent(SettingAccountActivity.this, ChangePasswordActivity.class);

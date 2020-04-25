@@ -1,21 +1,24 @@
 package byc.avt.avanteeborrower.view.setting;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 
 import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
 
 public class SettingActivity extends AppCompatActivity implements View.OnClickListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,12 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         CardView cvTerms = findViewById(R.id.cv_terms);
         CardView cvRisk = findViewById(R.id.cv_risk_info);
         CardView cvLogout = findViewById(R.id.cv_logout); // logout button
+        ImageView ivInitial = findViewById(R.id.imageProfile);
+        TextView initial = findViewById(R.id.tv_initial);
+
+        String name = "Henry David Lie";
+        String letter = String.valueOf(name.charAt(0));
+        initial.setText(letter);
 
         cvAccountSetting.setOnClickListener(this);
         cvFAQ.setOnClickListener(this);

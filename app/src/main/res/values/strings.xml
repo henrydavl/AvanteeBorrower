@@ -204,6 +204,9 @@
     <string name="afpi_logo">AFPI Logo</string>
     <string name="logo">Logo</string>
     <string name="currency_IDR">Rp</string>
+    <string name="profile_picture">Foto profil</string>
+    <string name="take_profile_picture">Ambil foto</string>
+    <string name="profile_picture_desc">Ambil foto terbaik Anda untuk digunakan sebagai foto profil. Pastikan wajah terlihat dengan jelas di dalam bingkai foto.</string>
     <string name="tips_for_photo">Petunjuk pengambilan foto</string>
     <string name="account_foto_tips">Untuk mempercepat proses verifikasi identitas Anda, mohon mengambil foto halaman depan buku rekening atau rekening koran seperti contoh berikut:</string>
     <string name="account_book">Buku rekening</string>
