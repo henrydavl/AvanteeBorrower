@@ -3,6 +3,7 @@ package byc.avt.avanteeborrower.intro;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.Manifest;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -10,9 +11,23 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionDeniedResponse;
+import com.karumi.dexter.listener.PermissionGrantedResponse;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+import com.karumi.dexter.listener.single.DialogOnDeniedPermissionListener;
+import com.karumi.dexter.listener.single.PermissionListener;
+
+import java.util.List;
+
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.adapter.OnBoardAdapter;
 import byc.avt.avanteeborrower.helper.PrefManager;
+import byc.avt.avanteeborrower.view.MainActivity;
 
 public class OnBoardingActivity extends AppCompatActivity {
 
@@ -47,6 +62,8 @@ public class OnBoardingActivity extends AppCompatActivity {
                 onBoardPager.setCurrentItem(board_heading.length);
             }
         });
+
+        requestCameraPermission();
     }
 
     public void dotsIndicator(int position) {
@@ -93,4 +110,28 @@ public class OnBoardingActivity extends AppCompatActivity {
 
         }
     };
+
+    private void requestCameraPermission() {
+        Dexter.withContext(OnBoardingActivity.this)
+                .withPermissions(
+                        Manifest.permission.READ_PHONE_STATE,
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.ACCESS_COARSE_LOCATION
+                )
+                .withListener(new MultiplePermissionsListener() {
+                    @Override
+                    public void onPermissionsChecked(MultiplePermissionsReport multiplePermissionsReport) {
+
+                    }
+
+                    @Override
+                    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> list, PermissionToken permissionToken) {
+
+                    }
+                }).check();
+    }
+
+    private void requestNotificationPermission() {}
+    private void requestLocationPermission() {}
+    private void requestPhoneCallPermission() {}
 }

@@ -1,13 +1,11 @@
 package byc.avt.avanteeborrower.view.setting;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +19,10 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
+
+/**
+ * @link #onClick(View view) to trigger when a button is clickked
+ * */
 
 public class SettingAccountActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -68,14 +70,7 @@ public class SettingAccountActivity extends AppCompatActivity implements View.On
         switch (view.getId()){
             case R.id.img_profile_picture:
             case R.id.img_edit_circle:
-                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(SettingAccountActivity.this, R.style.BottomSheetDialogTheme);
-                View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.sheet_profile_edit, findViewById(R.id.btSheet_profPic));
-                bottomSheetView.findViewById(R.id.btn_take_profile_picture).setOnClickListener(view1 -> {
-                    showMessage("Take picture");
-                    bottomSheetDialog.dismiss();
-                });
-                bottomSheetDialog.setContentView(bottomSheetView);
-                bottomSheetDialog.show();
+                openSheet();
                 break;
             case R.id.cv_change_password:
                 intent = new Intent(SettingAccountActivity.this, ChangePasswordActivity.class);
@@ -100,6 +95,17 @@ public class SettingAccountActivity extends AppCompatActivity implements View.On
                 showMessage("View ess doc");
                 break;
         }
+    }
+
+    private void openSheet(){
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(SettingAccountActivity.this, R.style.BottomSheetDialogTheme);
+        View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.sheet_profile_edit, findViewById(R.id.btSheet_profPic));
+        bottomSheetView.findViewById(R.id.btn_take_profile_picture).setOnClickListener(view1 -> {
+            showMessage("Take picture");
+            bottomSheetDialog.dismiss();
+        });
+        bottomSheetDialog.setContentView(bottomSheetView);
+        bottomSheetDialog.show();
     }
 
     private void showMessage(String msg) {

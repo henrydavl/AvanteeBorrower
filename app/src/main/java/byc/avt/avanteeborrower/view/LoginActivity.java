@@ -18,6 +18,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.intro.OnBoardingActivity;
 import byc.avt.avanteeborrower.view.misc.ForgotPasswordActivity;
 import byc.avt.avanteeborrower.view.sheet.TermFragment;
 
@@ -25,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private TextInputLayout editPhoneNumber, editPassword;
     private Button btnLogin;
+    public static String FROM_OTHER_ACTIVITY = "FROM_OTHER_ACTIVITY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,9 +103,19 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
-            return true;
+        if (getIntent().getStringExtra(FROM_OTHER_ACTIVITY) != null){
+            if (item.getItemId() == android.R.id.home) {
+                Intent intent = new Intent(LoginActivity.this, OnBoardingActivity.class);
+                intent.putExtra(OnBoardingActivity.notFirstTime, true);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+            }
+        } else {
+            if (item.getItemId() == android.R.id.home) {
+                onBackPressed();
+                return true;
+            }
         }
         return super.onOptionsItemSelected(item);
     }
