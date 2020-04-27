@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.karumi.dexter.Dexter;
@@ -55,6 +56,8 @@ public class OnBoardingActivity extends AppCompatActivity {
                 onBoardPager.setCurrentItem(board_heading.length);
             }
         }
+
+        Toast.makeText(this, "AAA", Toast.LENGTH_SHORT).show();
 
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
