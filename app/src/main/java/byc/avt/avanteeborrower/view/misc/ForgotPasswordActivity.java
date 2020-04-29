@@ -1,22 +1,28 @@
 package byc.avt.avanteeborrower.view.misc;
 
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.view.sheet.SheetMessageSent;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
+
+    private TextInputLayout phoneNumber;
+    private Button btnSend;
+    private String phone = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,16 +34,34 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        TextInputLayout phoneNumber = findViewById(R.id.edit_f_pass_phone);
-        Button btnSend = findViewById(R.id.btn_reset_password);
-        String phone = phoneNumber.getEditText().getText().toString().trim();
-        btnSend.setEnabled(!phone.isEmpty());
-        btnSend.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        phoneNumber = findViewById(R.id.edit_f_pass_phone);
+        Objects.requireNonNull(phoneNumber.getEditText()).addTextChangedListener(fgPasswordTextWatcher);
+        btnSend = findViewById(R.id.btn_reset_password);
+        btnSend.setOnClickListener(view -> openSheet(phone));
+    }
 
-            }
-        });
+    private TextWatcher fgPasswordTextWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            phone = Objects.requireNonNull(phoneNumber.getEditText()).getText().toString().trim();
+            btnSend.setEnabled(!phone.isEmpty());
+
+        }
+
+        @Override
+        public void afterTextChanged(Editable editable) {
+
+        }
+    };
+
+    private void openSheet(String phone) {
+        SheetMessageSent messageSent = new SheetMessageSent(phone);
+        messageSent.show(getSupportFragmentManager(), messageSent.getTag());
     }
 
     private void showMessage(String msg) {

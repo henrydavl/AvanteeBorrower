@@ -21,10 +21,10 @@ import byc.avt.avanteeborrower.model.User;
 
 public class OTPActivity extends AppCompatActivity {
 
-    private TextView tvCountdown, tvSendTo;
+    private TextView tvCountdown;
     private Button btnVerify;
     private EditText edtOTPCode;
-    public static final  String NEW_USER = "new_user";
+    public static final String NEW_USER = "new_user";
     private User user;
 
     @SuppressLint("SetTextI18n")
@@ -38,32 +38,39 @@ public class OTPActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        TextView tvSendTo = findViewById(R.id.tv_otp_sent_to);
         tvCountdown = findViewById(R.id.tv_countdown);
-        tvSendTo = findViewById(R.id.tv_otp_sent_to);
 
         if (getIntent().getParcelableExtra(NEW_USER) != null) {
             user = getIntent().getParcelableExtra(NEW_USER);
             tvSendTo.setText(getString(R.string.otp_desc) + user.getPhoneNumber());
         }
 
-        new CountDownTimer(30000, 1000){
+        setTimer();
+    }
+
+    /* todo send new otp code */
+    private View.OnClickListener resendListener = view -> {
+        String msg = "Coming soon";
+        showMessage(msg);
+        setTimer();
+    };
+
+    private void setTimer() {
+        new CountDownTimer(30000, 1000) {
             @SuppressLint({"SetTextI18n", "DefaultLocale"})
             @Override
             public void onTick(long millisUntilFinished) {
                 int seconds = (int) (millisUntilFinished / 1000);
+                tvCountdown.setEnabled(false);
                 tvCountdown.setText(getString(R.string.resend_in) + String.format("%02d:%02d", seconds / 60, seconds % 60));
             }
 
             @Override
             public void onFinish() {
+                tvCountdown.setEnabled(true);
                 tvCountdown.setText(getString(R.string.resend));
-                tvCountdown.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        String msg = "Coming soon";
-                        showMessage(msg);
-                    }
-                });
+                tvCountdown.setOnClickListener(resendListener);
             }
         }.start();
     }

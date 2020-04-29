@@ -17,11 +17,9 @@ import java.util.Objects;
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.view.LoginActivity;
 
-public class PasswordChangedSheet extends BottomSheetDialogFragment {
+public class SheetPasswordChanged extends BottomSheetDialogFragment {
 
-    public static Boolean dismiss = false;
-
-    public PasswordChangedSheet() {
+    public SheetPasswordChanged() {
 
     }
 
@@ -34,7 +32,6 @@ public class PasswordChangedSheet extends BottomSheetDialogFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        dismiss = false;
     }
 
     @Nullable

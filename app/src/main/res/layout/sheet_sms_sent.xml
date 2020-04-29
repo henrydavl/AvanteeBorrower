@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/btSheet_passChanged"
+    android:id="@+id/btSheet_smsSent"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/lightest_neutral"
@@ -12,11 +12,11 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/sheet_pChanged_handle"
+            android:id="@+id/sheet_smsSent_handle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:contentDescription="@string/profile_picture"
+            android:contentDescription="@string/sms_sent"
             android:src="@drawable/ic_handle"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/sheet_pChanged_ltAnim"
+            android:id="@+id/sheet_smsSent_ltAnim"
             android:layout_width="132dp"
             android:layout_height="132dp"
             android:layout_marginStart="16dp"
@@ -32,29 +32,29 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sheet_pChanged_handle"
+            app:layout_constraintTop_toBottomOf="@+id/sheet_smsSent_handle"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:lottie_rawRes="@raw/new_password_done_once" />
+            app:lottie_rawRes="@raw/sms_sent_once" />
 
         <TextView
-            android:id="@+id/sheet_pChanged_title"
+            android:id="@+id/sheet_smsSent_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/ibm_plex_sans_semi_bold"
-            android:text="@string/password_changed"
+            android:text="@string/sms_sent"
             android:textAlignment="center"
             android:textColor="@color/dark"
             android:textSize="19sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sheet_pChanged_ltAnim" />
+            app:layout_constraintTop_toBottomOf="@+id/sheet_smsSent_ltAnim" />
 
         <TextView
-            android:id="@+id/sheet_profile_desc"
+            android:id="@+id/sheet_smsSent_desc"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -63,14 +63,32 @@
             android:layout_marginBottom="40dp"
             android:alpha="0.5"
             android:fontFamily="@font/ibm_plex_sans"
-            android:text="@string/password_changed_desc"
+            android:text="@string/reset_message"
             android:textAlignment="center"
             android:textColor="@color/dark"
             android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sheet_smsSent_title" />
+
+        <TextView
+            android:id="@+id/sheet_smsSent_tvResend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:text="@string/resend"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sheet_pChanged_title" />
+            app:layout_constraintTop_toBottomOf="@+id/sheet_smsSent_desc" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>

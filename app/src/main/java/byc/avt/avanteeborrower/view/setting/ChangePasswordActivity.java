@@ -4,27 +4,20 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.view.LoginActivity;
-import byc.avt.avanteeborrower.view.sheet.PasswordChangedSheet;
+import byc.avt.avanteeborrower.view.sheet.SheetPasswordChanged;
 
 public class ChangePasswordActivity extends AppCompatActivity {
 
@@ -88,7 +81,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
     }
 
     private void openSheet(){
-        PasswordChangedSheet bottomSheetFragment = new PasswordChangedSheet();
+        SheetPasswordChanged bottomSheetFragment = new SheetPasswordChanged();
         bottomSheetFragment.show(getSupportFragmentManager(), bottomSheetFragment.getTag());
     }
 

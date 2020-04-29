@@ -50,14 +50,12 @@ public class OnBoardingActivity extends AppCompatActivity {
         dotsIndicator(0);
         onBoardPager.addOnPageChangeListener(listener);
 
-        if (getIntent().getBooleanExtra(notFirstTime, false)){
+        if (getIntent().getBooleanExtra(notFirstTime, false)) {
             boolean check = getIntent().getBooleanExtra(notFirstTime, false);
-            if (check){
+            if (check) {
                 onBoardPager.setCurrentItem(board_heading.length);
             }
         }
-
-        Toast.makeText(this, "AAA", Toast.LENGTH_SHORT).show();
 
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +71,7 @@ public class OnBoardingActivity extends AppCompatActivity {
         TextView[] dots = new TextView[board_heading.length];
         onBoardDots.removeAllViews();
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        params.setMargins(8,0,8,0);
+        params.setMargins(8, 0, 8, 0);
 
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
@@ -134,7 +132,12 @@ public class OnBoardingActivity extends AppCompatActivity {
                 }).check();
     }
 
-    private void requestNotificationPermission() {}
-    private void requestLocationPermission() {}
-    private void requestPhoneCallPermission() {}
+    private void requestNotificationPermission() {
+    }
+
+    private void requestLocationPermission() {
+    }
+
+    private void requestPhoneCallPermission() {
+    }
 }
