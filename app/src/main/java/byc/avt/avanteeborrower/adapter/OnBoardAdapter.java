@@ -15,6 +15,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.view.MainActivity;
 import byc.avt.avanteeborrower.view.setting.SettingActivity;
 import byc.avt.avanteeborrower.view.RegisterActivity;
 
@@ -83,7 +84,7 @@ public class OnBoardAdapter extends PagerAdapter {
         btnLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, SettingActivity.class);
+                Intent intent = new Intent(context, MainActivity.class);
                 context.startActivity(intent);
             }
         });

@@ -1,15 +1,14 @@
 package byc.avt.avanteeborrower.view;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -20,30 +19,21 @@ import byc.avt.avanteeborrower.view.fragment.NotificationFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActionBar actionBar;
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment fragment;
-            actionBar.setDisplayShowHomeEnabled(true);
             switch (item.getItemId()) {
                 case R.id.nav_dashboard:
-                    actionBar.setIcon(R.drawable.ic_dashboard);
-                    actionBar.setTitle(" " + getString(R.string.nav_dashboard));
                     fragment = new DashboardFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.nav_loan:
-                    actionBar.setIcon(R.drawable.ic_loan_color);
-                    actionBar.setTitle(" " + getString(R.string.nav_loan));
                     fragment = new LoanFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.nav_notification:
-                    actionBar.setIcon(R.drawable.ic_notification_color);
-                    actionBar.setTitle(" " + getString(R.string.nav_notification));
                     fragment = new NotificationFragment();
                     loadFragment(fragment);
                     return true;
@@ -62,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        actionBar = getSupportActionBar();
         BottomNavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         if (savedInstanceState == null) {
