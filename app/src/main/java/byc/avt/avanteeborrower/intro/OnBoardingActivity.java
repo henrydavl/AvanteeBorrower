@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.Manifest;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -113,23 +114,28 @@ public class OnBoardingActivity extends AppCompatActivity {
     };
 
     private void requestCameraPermission() {
-        Dexter.withContext(OnBoardingActivity.this)
-                .withPermissions(
-                        Manifest.permission.READ_PHONE_STATE,
-                        Manifest.permission.ACCESS_FINE_LOCATION,
-                        Manifest.permission.ACCESS_COARSE_LOCATION
-                )
-                .withListener(new MultiplePermissionsListener() {
-                    @Override
-                    public void onPermissionsChecked(MultiplePermissionsReport multiplePermissionsReport) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            Dexter.withContext(OnBoardingActivity.this)
+                    .withPermissions(
+                            Manifest.permission.READ_PHONE_STATE,
+                            Manifest.permission.ACCESS_FINE_LOCATION,
+                            Manifest.permission.ACCESS_COARSE_LOCATION,
+                            Manifest.permission.READ_PHONE_STATE,
+                            Manifest.permission.READ_PHONE_NUMBERS,
+                            Manifest.permission.RECEIVE_SMS
+                    )
+                    .withListener(new MultiplePermissionsListener() {
+                        @Override
+                        public void onPermissionsChecked(MultiplePermissionsReport multiplePermissionsReport) {
 
-                    }
+                        }
 
-                    @Override
-                    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> list, PermissionToken permissionToken) {
+                        @Override
+                        public void onPermissionRationaleShouldBeShown(List<PermissionRequest> list, PermissionToken permissionToken) {
 
-                    }
-                }).check();
+                        }
+                    }).check();
+        }
     }
 
     private void requestNotificationPermission() {

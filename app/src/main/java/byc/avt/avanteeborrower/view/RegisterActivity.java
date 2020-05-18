@@ -193,8 +193,11 @@ public class RegisterActivity extends AppCompatActivity {
             }
             // POST to server through endpoint
             user = new User(phoneNumber, email, password, ref_id);
-            viewModel.register(user);
-            viewModel.getStatus().observe(this, checkStatus);
+//            viewModel.register(user);
+//            viewModel.getStatus().observe(this, checkStatus);
+            Intent otp = new Intent(RegisterActivity.this, OTPActivity.class);
+            otp.putExtra(OTPActivity.NEW_USER, user);
+            startActivity(otp);
         }
     }
 
