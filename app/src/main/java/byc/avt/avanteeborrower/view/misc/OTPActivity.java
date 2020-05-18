@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -14,9 +15,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mukesh.OnOtpCompletionListener;
+import com.mukesh.OtpView;
+
 import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.helper.receiver.OTPReceiver;
 import byc.avt.avanteeborrower.model.User;
 
 public class OTPActivity extends AppCompatActivity {
@@ -26,6 +31,7 @@ public class OTPActivity extends AppCompatActivity {
     private EditText edtOTPCode;
     public static final String NEW_USER = "new_user";
     private User user;
+    private OtpView otpView;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -40,12 +46,14 @@ public class OTPActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         TextView tvSendTo = findViewById(R.id.tv_otp_sent_to);
         tvCountdown = findViewById(R.id.tv_countdown);
+        otpView = findViewById(R.id.edt_otp_code);
 
         if (getIntent().getParcelableExtra(NEW_USER) != null) {
             user = getIntent().getParcelableExtra(NEW_USER);
             tvSendTo.setText(getString(R.string.otp_desc) + user.getPhoneNumber());
         }
 
+        new OTPReceiver().setEditText(otpView);
         setTimer();
     }
 
