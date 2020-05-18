@@ -82,7 +82,7 @@ public class SheetMessageSent extends BottomSheetDialogFragment {
         intent.putExtra(LoginActivity.FROM_OTHER_ACTIVITY, "forgot_password");
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-        Objects.requireNonNull(getActivity()).finish();
+        requireActivity().finish();
     }
 
 }

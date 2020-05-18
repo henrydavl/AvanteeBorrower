@@ -32,6 +32,7 @@ public class OTPActivity extends AppCompatActivity {
     public static final String NEW_USER = "new_user";
     private User user;
     private OtpView otpView;
+    private CountDownTimer timer;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -65,7 +66,7 @@ public class OTPActivity extends AppCompatActivity {
     };
 
     private void setTimer() {
-        new CountDownTimer(30000, 1000) {
+        timer = new CountDownTimer(30000, 1000) {
             @SuppressLint({"SetTextI18n", "DefaultLocale"})
             @Override
             public void onTick(long millisUntilFinished) {
