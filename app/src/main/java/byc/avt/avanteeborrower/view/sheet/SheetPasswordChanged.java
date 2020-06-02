@@ -12,8 +12,6 @@ import androidx.annotation.Nullable;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
-import java.util.Objects;
-
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.view.LoginActivity;
 
@@ -45,7 +43,7 @@ public class SheetPasswordChanged extends BottomSheetDialogFragment {
         intent.putExtra(LoginActivity.FROM_OTHER_ACTIVITY, "changePassword");
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-        Objects.requireNonNull(getActivity()).finish();
+        requireActivity().finish();
     }
 }
 

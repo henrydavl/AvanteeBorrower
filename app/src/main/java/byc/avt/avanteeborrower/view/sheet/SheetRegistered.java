@@ -4,18 +4,15 @@ package byc.avt.avanteeborrower.view.sheet;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-
-import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.view.LoginActivity;
@@ -52,6 +49,6 @@ public class SheetRegistered extends BottomSheetDialogFragment {
         intent.putExtra(LoginActivity.FROM_OTHER_ACTIVITY, "registerSuccess");
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-        Objects.requireNonNull(getActivity()).finish();
+        requireActivity().finish();
     }
 }

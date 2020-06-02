@@ -12,7 +12,7 @@
     <string name="email">Email (Opsional)</string>
     <string name="referral_id">Referral ID (opsional)</string>
     <string name="ive_read">Saya telah membaca dan setuju dengan</string>
-    <string name="terms_and_condition">Syarat &amp; Ketentuan Avantee</string>
+    <string name="terms_and_condition">Syarat dan Ketentuan Avantee</string>
     <string name="register_as_borrower">Daftar sebagai peminjam</string>
     <string name="otp_verification">Verifikasi OTP</string>
     <string name="otp_desc">Masukkan kode verifikasi yang telah dikirimkan melalui SMS ke&#160;</string>

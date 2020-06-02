@@ -16,8 +16,6 @@ import androidx.annotation.Nullable;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
-import java.util.Objects;
-
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.view.LoginActivity;
 
@@ -46,10 +44,14 @@ public class SheetMessageSent extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.sheet_sms_sent, container, false);
-        tvResend = v.findViewById(R.id.sheet_smsSent_tvResend);
+        return inflater.inflate(R.layout.sheet_sms_sent, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        tvResend = view.findViewById(R.id.sheet_smsSent_tvResend);
         setTimer();
-        return v;
     }
 
     /* todo send message to phone number */

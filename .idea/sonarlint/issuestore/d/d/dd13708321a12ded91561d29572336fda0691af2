@@ -1,0 +1,20 @@
+
+Z
+java:S1128"?Remove this unused import 'com.mukesh.OnOtpCompletionListener'.(–ŞèÆûÿÿÿÿ
+H
+java:S1128
+"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ
+l
+java:S1450""VRemove the "otpView" field and declare it as a local variable in the relevant methods.(ğ°ªĞ
+o
+java:S1450#"TRemove the "timer" field and declare it as a local variable in the relevant methods.(ğÀ¦Öùÿÿÿÿ
+n
+java:S1450!"SRemove the "user" field and declare it as a local variable in the relevant methods.(’Ø¾ıÿÿÿÿ
+M
+java:S1135="2Complete the task associated to this TODO comment.(ãœüÿÿÿÿ
+B
+java:S1068"-Remove this unused "btnVerify" private field.(™ë3
+D
+java:S1068".Remove this unused "edtOTPCode" private field.(à Ô
+D
+java:S1068#")Remove this unused "timer" private field.(ğÀ¦Öùÿÿÿÿ

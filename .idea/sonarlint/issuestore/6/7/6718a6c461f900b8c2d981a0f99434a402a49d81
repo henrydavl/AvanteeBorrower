@@ -1,0 +1,10 @@
+
+l
+java:S1128"QRemove this unused import 'byc.avt.avanteeborrower.view.setting.SettingActivity'.(ÕÚëÉúÿÿÿÿ
+a
+java:S1128"FRemove this unused import 'byc.avt.avanteeborrower.view.MainActivity'.(š¤§Ñıÿÿÿÿ
+>
+java:S1659"(Declare "board_desc" on a separate line.(«ïô
+m	java:S116"XRename this field "board_heading" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ïô
+j	java:S116"URename this field "board_desc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ïô
+q	java:S116""WRename this field "board_images" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÚ—Òúÿÿÿÿ
