@@ -60,7 +60,7 @@ public class OTPActivity extends AppCompatActivity {
 
     /* todo send new otp code */
     private View.OnClickListener resendListener = view -> {
-        String msg = "Coming soon";
+        String msg = "Coming sooon";
         showMessage(msg);
         setTimer();
     };
