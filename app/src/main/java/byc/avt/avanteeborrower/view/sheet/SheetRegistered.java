@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.view.LoginActivity;
+import byc.avt.avanteeborrower.view.auth.login.LoginActivity;
 
 /**
  * A simple {@link Fragment} subclass.

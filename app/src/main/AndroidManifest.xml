@@ -30,20 +30,20 @@
         <activity android:name=".view.setting.ChangePasswordActivity" />
         <activity android:name=".view.setting.SettingActivity" />
         <activity android:name=".view.misc.ForgotPasswordActivity" />
-        <activity android:name=".view.CameraActivity" />
-        <activity android:name=".view.RegistrationFormActivity" />
+        <activity android:name=".view.misc.CameraActivity" />
+        <activity android:name=".view.registration.RegistrationFormActivity" />
         <activity android:name=".view.misc.OTPActivity" />
         <activity
-            android:name=".intro.NoticeActivity"
+            android:name=".view.intro.NoticeActivity"
             android:theme="@style/OnBoardTheme" />
-        <activity android:name=".view.RegisterActivity" />
-        <activity android:name=".view.LoginActivity" />
+        <activity android:name=".view.auth.register.RegisterActivity" />
+        <activity android:name=".view.auth.login.LoginActivity" />
         <activity
-            android:name=".intro.OnBoardingActivity"
+            android:name=".view.intro.OnBoardingActivity"
             android:theme="@style/OnBoardTheme" />
-        <activity android:name=".view.MainActivity" />
+        <activity android:name=".view.misc.MainActivity" />
         <activity
-            android:name=".intro.SplashActivity"
+            android:name=".view.intro.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

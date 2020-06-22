@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.view.LoginActivity;
+import byc.avt.avanteeborrower.view.auth.login.LoginActivity;
 
 public class SheetPasswordChanged extends BottomSheetDialogFragment {
 
