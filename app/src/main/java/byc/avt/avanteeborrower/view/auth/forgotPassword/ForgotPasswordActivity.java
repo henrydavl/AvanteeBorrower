@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower.view.auth.forgotpassword;
+package byc.avt.avanteeborrower.view.auth.forgotPassword;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -15,28 +15,37 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.view.sheet.SheetMessageSent;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
 
-    private TextInputLayout phoneNumber;
-    private Button btnSend;
+    @BindView(R.id.edit_f_pass_phone)
+    TextInputLayout phoneNumber;
+    @BindView(R.id.btn_reset_password)
+    Button btnSend;
+    @BindView(R.id.forgotPassword_toolbar)
+    Toolbar toolbar;
+
     private String phone = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
-        Toolbar toolbar = findViewById(R.id.forgotPassword_toolbar);
+        ButterKnife.bind(this);
+
         setSupportActionBar(toolbar);
-        Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.ic_close);
-        getSupportActionBar().setTitle("");
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        phoneNumber = findViewById(R.id.edit_f_pass_phone);
+        if  (getSupportActionBar() != null) {
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close);
+            getSupportActionBar().setTitle("");
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         Objects.requireNonNull(phoneNumber.getEditText()).addTextChangedListener(fgPasswordTextWatcher);
-        btnSend = findViewById(R.id.btn_reset_password);
         btnSend.setOnClickListener(view -> openSheet(phone));
     }
 

@@ -16,6 +16,8 @@ import android.view.ViewGroup;
 import com.google.android.material.tabs.TabLayout;
 
 import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.view.main.notification.info.InfoFragment;
+import byc.avt.avanteeborrower.view.main.notification.message.MessageFragment;
 
 /**
  * A simple {@link Fragment} subclass.

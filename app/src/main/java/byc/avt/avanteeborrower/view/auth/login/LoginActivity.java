@@ -17,37 +17,46 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.view.auth.forgotpassword.ForgotPasswordActivity;
+import byc.avt.avanteeborrower.view.auth.forgotPassword.ForgotPasswordActivity;
 import byc.avt.avanteeborrower.view.onboarding.OnBoardingActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private TextInputLayout editPhoneNumber, editPassword;
-    private Button btnLogin;
+    @BindView(R.id.edt_log_phone)
+    TextInputLayout editPhoneNumber;
+    @BindView(R.id.edt_log_password)
+    TextInputLayout editPassword;
+    @BindView(R.id.btn_login)
+    Button btnLogin;
+    @BindView(R.id.tv_forgot_password)
+    TextView tvForgotPassword;
+    @BindView(R.id.toolbar_login)
+    Toolbar toolbar;
+
     public static String FROM_OTHER_ACTIVITY = "FROM_OTHER_ACTIVITY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        editPhoneNumber = findViewById(R.id.edt_log_phone);
-        editPassword = findViewById(R.id.edt_log_password);
-        btnLogin = findViewById(R.id.btn_login);
-        TextView tvForgotPassword = findViewById(R.id.tv_forgot_password);
-        Toolbar bar = findViewById(R.id.toolbar_login);
-        setSupportActionBar(bar);
-        Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.ic_back_24px);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ButterKnife.bind(this);
+
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back_24px);
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         Objects.requireNonNull(editPhoneNumber.getEditText()).addTextChangedListener(loginTextWatcher);
         Objects.requireNonNull(editPassword.getEditText()).addTextChangedListener(loginTextWatcher);
-        tvForgotPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
-                startActivity(intent);
-            }
+
+        tvForgotPassword.setOnClickListener(view -> {
+            Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+            startActivity(intent);
         });
     }
 

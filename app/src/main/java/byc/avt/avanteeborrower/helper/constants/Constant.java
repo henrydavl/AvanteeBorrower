@@ -1,11 +1,12 @@
-package byc.avt.avanteeborrower.helper;
+package byc.avt.avanteeborrower.helper.constants;
 
 import android.util.Base64;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
-public final class GlobalVariables {
+public final class Constant {
 
     public static final String BASE_URL = "https://avantee.co.id:8444/baycode_api/";
     public static final String IMG_URL = "https://avantee.co.id:8444/assets/images/";
@@ -22,4 +23,7 @@ public final class GlobalVariables {
         return header;
     }
 
+//    public static final Pattern PASSWORD_PATTERN = Pattern.compile(
+//
+//    );
 }

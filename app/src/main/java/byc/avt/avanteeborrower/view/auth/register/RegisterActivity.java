@@ -23,8 +23,9 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 import java.util.Timer;
-import java.util.regex.Pattern;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.model.User;
 import byc.avt.avanteeborrower.view.auth.AuthenticationViewModel;
@@ -33,52 +34,54 @@ import byc.avt.avanteeborrower.view.sheet.TermFragment;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private TextInputLayout editPhoneNumber, editPassword, edtEmail, edtRefId, edtConfirmPassword;
+    @BindView(R.id.edt_reg_phone)
+    TextInputLayout editPhoneNumber;
+    @BindView(R.id.edt_reg_password)
+    TextInputLayout editPassword;
+    @BindView(R.id.edt_reg_email)
+    TextInputLayout edtEmail;
+    @BindView(R.id.edt_reg_ref_id)
+    TextInputLayout edtRefId;
+    @BindView(R.id.edt_reg_re_password)
+    TextInputLayout edtConfirmPassword;
+
+    @BindView(R.id.btn_register)
+    Button btnRegister;
+    @BindView(R.id.cb_agree)
+    CheckBox checkAgree;
+    @BindView(R.id.pb_register)
+    ProgressBar pbRegister;
+    @BindView(R.id.register_toolbar)
+    Toolbar bar;
+
     private String phoneNumber, password, rePassword;
-    private ProgressBar pbRegister;
-    private Button btnRegister;
-    private CheckBox checkAgree;
     private AuthenticationViewModel viewModel;
     private Boolean checkInput = false, readTerm = false;
     private Timer timer;
     private User user;
-    private static final Pattern PASSWORD_PATTERN = Pattern.compile("^" +
-            "(?=.*[0-9])" +         //at least has 1 number
-            "(?=.*[a-z])" +         //at least has 1 lower case letter
-            "(?=.*[A-Z])" +         //at least has 1 upper case letter
-            //"(?=.*[a-zA-Z])" + //can be any letter (uppercase/lowercase)
-            "(?=.*[@#$%^&+=])" + //at least 1 special character
-            "(?=\\\\S+$)." + //no white spaces
-            "{8,}" + //at least 8 character
-            "$");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        edtEmail = findViewById(R.id.edt_reg_email);
-        editPhoneNumber = findViewById(R.id.edt_reg_phone);
-        editPassword = findViewById(R.id.edt_reg_password);
-        edtConfirmPassword = findViewById(R.id.edt_reg_re_password);
-        edtRefId = findViewById(R.id.edt_reg_ref_id);
-        btnRegister = findViewById(R.id.btn_register);
-        checkAgree = findViewById(R.id.cb_remember_me);
-        pbRegister = findViewById(R.id.pb_register);
-        Toolbar bar = findViewById(R.id.register_toolbar);
+        ButterKnife.bind(this);
+
         setSupportActionBar(bar);
-        viewModel = ViewModelProviders.of(this).get(AuthenticationViewModel.class);
-        Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.ic_back_24px);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back_24px);
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         Objects.requireNonNull(editPhoneNumber.getEditText()).addTextChangedListener(registerTextWatcher);
         Objects.requireNonNull(editPassword.getEditText()).addTextChangedListener(registerTextWatcher);
+
+        viewModel = ViewModelProviders.of(this).get(AuthenticationViewModel.class);
+
         checkAgree.setOnCheckedChangeListener(showTermListener);
-        btnRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showLoading(true);
-                confirmInput();
-            }
+        btnRegister.setOnClickListener(view -> {
+            showLoading(true);
+            confirmInput();
         });
     }
 

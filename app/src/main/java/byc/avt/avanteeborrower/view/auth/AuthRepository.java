@@ -15,7 +15,7 @@ import java.util.Objects;
 import byc.avt.avanteeborrower.model.User;
 import cz.msebera.android.httpclient.Header;
 
-import static byc.avt.avanteeborrower.helper.GlobalVariables.*;
+import static byc.avt.avanteeborrower.helper.constants.Constant.*;
 
 public class AuthRepository {
     private static AuthRepository repository;
