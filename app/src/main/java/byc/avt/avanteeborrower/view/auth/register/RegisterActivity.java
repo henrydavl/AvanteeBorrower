@@ -11,13 +11,11 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -28,11 +26,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.model.User;
+import byc.avt.avanteeborrower.usecase.register.IRegisterUseCase;
+import byc.avt.avanteeborrower.usecase.register.RegisterUseCase;
+import byc.avt.avanteeborrower.view.BaseActivity;
 import byc.avt.avanteeborrower.view.auth.AuthenticationViewModel;
 import byc.avt.avanteeborrower.view.misc.OTPActivity;
-import byc.avt.avanteeborrower.view.sheet.TermFragment;
+import byc.avt.avanteeborrower.view.btSheet.TermFragment;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends BaseActivity<RegisterUseCase> implements IRegisterUseCase.Views {
 
     @BindView(R.id.edt_reg_phone)
     TextInputLayout editPhoneNumber;
@@ -61,9 +62,17 @@ public class RegisterActivity extends AppCompatActivity {
     private User user;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+    protected RegisterUseCase initUseCase() {
+        return new RegisterUseCase(this);
+    }
+
+    @Override
+    protected int initLayout() {
+        return R.layout.activity_register;
+    }
+
+    @Override
+    protected void onCreated(Bundle savedInstanceState) {
         ButterKnife.bind(this);
 
         setSupportActionBar(bar);
@@ -76,7 +85,7 @@ public class RegisterActivity extends AppCompatActivity {
         Objects.requireNonNull(editPhoneNumber.getEditText()).addTextChangedListener(registerTextWatcher);
         Objects.requireNonNull(editPassword.getEditText()).addTextChangedListener(registerTextWatcher);
 
-        viewModel = ViewModelProviders.of(this).get(AuthenticationViewModel.class);
+        viewModel = new ViewModelProvider(this).get(AuthenticationViewModel.class);
 
         checkAgree.setOnCheckedChangeListener(showTermListener);
         btnRegister.setOnClickListener(view -> {
@@ -208,21 +217,17 @@ public class RegisterActivity extends AppCompatActivity {
         @Override
         public void onChanged(String s) {
             if (s.equals("ok")) {
-                showMessage("Success");
+                showToast("Success");
                 showLoading(false);
                 //intent to sms verification
                 Intent otp = new Intent(RegisterActivity.this, OTPActivity.class);
                 otp.putExtra(OTPActivity.NEW_USER, user);
                 startActivity(otp);
             } else {
-                showMessage("Failed");
+                showToast("Failed");
             }
         }
     };
-
-    private void showMessage(String msg) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-    }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -245,5 +250,35 @@ public class RegisterActivity extends AppCompatActivity {
             pbRegister.setVisibility(View.INVISIBLE);
             btnRegister.setVisibility(View.VISIBLE);
         }
+    }
+
+    @Override
+    public void onProgressRegister() {
+
+    }
+
+    @Override
+    public void onRegisterError(String msg) {
+
+    }
+
+    @Override
+    public void onRegisterSuccess() {
+
+    }
+
+    @Override
+    public void onParamAccepted(boolean accepted) {
+
+    }
+
+    @Override
+    public void onInvalidParam(String msg) {
+
+    }
+
+    @Override
+    public void onPhoneNumberVerified(boolean verified) {
+
     }
 }

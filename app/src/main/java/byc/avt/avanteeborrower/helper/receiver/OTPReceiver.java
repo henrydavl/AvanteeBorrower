@@ -8,11 +8,13 @@ import android.telephony.SmsMessage;
 
 import com.mukesh.OtpView;
 
+import byc.avt.avanteeborrower.helper.widget.PinViewEditText;
+
 public class OTPReceiver extends BroadcastReceiver {
 
-    private static OtpView otpView;
+    private static PinViewEditText otpView;
 
-    public void setEditText(OtpView editText)
+    public void setEditText(PinViewEditText editText)
     {
         OTPReceiver.otpView = editText;
     }
@@ -26,7 +28,7 @@ public class OTPReceiver extends BroadcastReceiver {
         {
             String message = sms.getMessageBody();
             String otp = message.split(": ")[1];
-            otpView.setText(otp);
+            otpView.setValue(otp);
         }
     }
 }

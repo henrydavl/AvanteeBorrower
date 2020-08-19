@@ -20,6 +20,7 @@ import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.helper.receiver.OTPReceiver;
+import byc.avt.avanteeborrower.helper.widget.PinViewEditText;
 import byc.avt.avanteeborrower.model.User;
 
 public class OTPActivity extends AppCompatActivity {
@@ -29,7 +30,7 @@ public class OTPActivity extends AppCompatActivity {
     private EditText edtOTPCode;
     public static final String NEW_USER = "new_user";
     private User user;
-    private OtpView otpView;
+    private PinViewEditText otpView;
     private CountDownTimer timer;
 
     @SuppressLint("SetTextI18n")

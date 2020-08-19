@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -20,10 +19,13 @@ import java.util.Objects;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.usecase.login.ILoginUseCase;
+import byc.avt.avanteeborrower.usecase.login.LoginUseCase;
+import byc.avt.avanteeborrower.view.BaseActivity;
 import byc.avt.avanteeborrower.view.auth.forgotPassword.ForgotPasswordActivity;
 import byc.avt.avanteeborrower.view.onboarding.OnBoardingActivity;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity<LoginUseCase> implements ILoginUseCase.Views {
 
     @BindView(R.id.edt_log_phone)
     TextInputLayout editPhoneNumber;
@@ -39,9 +41,17 @@ public class LoginActivity extends AppCompatActivity {
     public static String FROM_OTHER_ACTIVITY = "FROM_OTHER_ACTIVITY";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+    protected LoginUseCase initUseCase() {
+        return new LoginUseCase(this);
+    }
+
+    @Override
+    protected int initLayout() {
+        return R.layout.activity_login;
+    }
+
+    @Override
+    protected void onCreated(Bundle savedInstanceState) {
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
@@ -126,5 +136,40 @@ public class LoginActivity extends AppCompatActivity {
             }
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onProgressLogin() {
+
+    }
+
+    @Override
+    public void onProgressInitialData(String msg) {
+
+    }
+
+    @Override
+    public void onLoginError(String msg) {
+
+    }
+
+    @Override
+    public void onLoginSuccess() {
+
+    }
+
+    @Override
+    public void onInvalidParam(String msg) {
+
+    }
+
+    @Override
+    public void onInitialDataSuccess() {
+
+    }
+
+    @Override
+    public void onInitialDataError() {
+
     }
 }

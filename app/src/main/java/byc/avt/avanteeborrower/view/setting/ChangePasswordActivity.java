@@ -17,7 +17,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.view.sheet.SheetPasswordChanged;
+import byc.avt.avanteeborrower.view.btSheet.SheetPasswordChanged;
 
 public class ChangePasswordActivity extends AppCompatActivity {
 

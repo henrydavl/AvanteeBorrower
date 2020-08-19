@@ -1,5 +1,4 @@
-package byc.avt.avanteeborrower.view.sheet;
-
+package byc.avt.avanteeborrower.view.btSheet;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,20 +9,15 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.view.auth.login.LoginActivity;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class SheetRegistered extends BottomSheetDialogFragment {
+public class SheetPasswordChanged extends BottomSheetDialogFragment {
 
-
-    public SheetRegistered() {
+    public SheetPasswordChanged() {
 
     }
 
@@ -41,14 +35,15 @@ public class SheetRegistered extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.sheet_registered, container, false);
+        return inflater.inflate(R.layout.sheet_password_changed, container, false);
     }
 
     private void gotoLogin(){
         Intent intent = new Intent(getActivity(), LoginActivity.class);
-        intent.putExtra(LoginActivity.FROM_OTHER_ACTIVITY, "registerSuccess");
+        intent.putExtra(LoginActivity.FROM_OTHER_ACTIVITY, "changePassword");
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         requireActivity().finish();
     }
 }
+
