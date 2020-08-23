@@ -4,7 +4,7 @@ public interface IOTPUseCase {
     interface Action extends IOTPUseCase {
         void doSendMessage(String phoneNumber);
 
-        void doCheckCode();
+        void doCheckCode(String code);
     }
 
     interface Views extends IOTPUseCase {
