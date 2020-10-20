@@ -17,20 +17,33 @@ public class Constant {
     @Retention(SOURCE)
     @StringDef()
     public @interface BaseSetting {
-        String BASE_URL = "https://avantee.co.id:8444/api/";
+        String BASE_URL = "https://avantee.co.id:8444/api/internal/";
         String IMG_URL = "https://avantee.co.id:8444/assets/images/";
-        String BASIC_AUTH = "Basic " + Base64.encodeToString("Av@nte3:p@ssw0rdyangsimpleajalahyah".getBytes(), Base64.NO_WRAP);
+        String BASIC_AUTH = "Basic " + Base64.encodeToString("B@code3:p@ssw0rdyangsimpleajalahyah".getBytes(), Base64.NO_WRAP);
         String CONTENT_TYPE = "application/json";
     }
 
     @Retention(SOURCE)
     @StringDef()
     public @interface Endpoint {
-        String SIGN_IN = BaseSetting.BASE_URL + "signin";
+        /* TODO: Universal endpoint */
+        String SIGN_IN = "signin";
 
+        /* TODO: Master data endpoint */
+        String COUNTRY = "country";
+        String PROVINCE = "Province";
+        String CITY = "city/{province_id}";
+        String BANK = "bank";
+        String MARITAL_STATUS = "status";
+        String RELIGION = "religion";
+        String LAST_EDUCATION = "education";
+        String JOB_TITLE = "job";
+        String EXPERIENCE = "experience";
+
+        /* TODO: Borrower endpoint */
+        String DASHBOARD = "borrower/dashboard";
+        String DOCUMENT = BaseSetting.BASE_URL + "borrower/document";
     }
-
-    public static final String X_API_KEY =  "G2HN@D4N483RS@MA";
 
 //    public static final Map<String, String> API_ACCESS(){
 //        Map<String, String> header = new HashMap<>();

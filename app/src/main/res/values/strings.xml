@@ -9,7 +9,7 @@
 
     <!-- TODO: Authentication Register -->
     <string name="register">Daftar</string>
-    <string name="email">Email (Opsional)</string>
+    <string name="email">Email Address</string>
     <string name="referral_id">Referral ID (opsional)</string>
     <string name="ive_read">Saya telah membaca dan setuju dengan</string>
     <string name="terms_and_condition">Syarat dan Ketentuan Avantee</string>

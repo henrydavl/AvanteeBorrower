@@ -11,7 +11,7 @@ public class LoginUseCase extends BaseUseCase<ILoginUseCase.Views> implements IL
     }
 
     @Override
-    public void doLogin(Context context, String username, String password) {
+    public void doLogin(String username, String password) {
 
     }
 

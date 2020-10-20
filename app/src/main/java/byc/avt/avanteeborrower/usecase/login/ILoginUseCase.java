@@ -4,7 +4,7 @@ import android.content.Context;
 
 public interface ILoginUseCase {
     interface Action extends ILoginUseCase {
-        void doLogin(Context context, String username, String password);
+        void doLogin(String username, String password);
 
         void doInitialData(Context context, String userId);
 

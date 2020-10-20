@@ -8,12 +8,20 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Objects;
 
+import byc.avt.avanteeborrower.helper.constants.Constant;
+import byc.avt.avanteeborrower.helper.network.RetrofitService;
 import byc.avt.avanteeborrower.model.User;
+import byc.avt.avanteeborrower.model.UserResponse;
+import byc.avt.avanteeborrower.model.UserSession;
 import cz.msebera.android.httpclient.Header;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static byc.avt.avanteeborrower.helper.constants.Constant.*;
 
@@ -21,12 +29,15 @@ public class AuthRepository {
     private static AuthRepository repository;
 //    private String baseUrl = BASE_URL;
     private AsyncHttpClient client = new AsyncHttpClient();
+    private RetrofitService apiService;
+    private static final String TAG = "AuthRepository";
 
     private AuthRepository() {
-        client.addHeader("Accept", TYPE);
-        client.addHeader("Content-Type: ", TYPE);
-        client.addHeader("Authorization", basicAuth);
-        client.addHeader("X-API-KEY", X_API_KEY);
+//        client.addHeader("Accept", TYPE);
+//        client.addHeader("Content-Type: ", TYPE);
+//        client.addHeader("Authorization", basicAuth);
+//        client.addHeader("X-API-KEY", X_API_KEY);
+        apiService = RetrofitService.getInstance();
     }
 
     public static AuthRepository getInstance() {
@@ -43,7 +54,7 @@ public class AuthRepository {
         params.put("no_handphone", user.getPhoneNumber());
         params.put("password", user.getPassword());
         params.put("referral_code", user.getRef_code());
-        client.post(BASE_URL+"baycode/checkapi", params, new AsyncHttpResponseHandler() {
+        client.post(BaseSetting.BASE_URL +"baycode/checkapi", params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 try {
@@ -64,8 +75,31 @@ public class AuthRepository {
         return msg;
     }
 
-//    public MutableLiveData<String> login(String phone, String password, Context context){
-//        final MutableLiveData<String> msg = new MutableLiveData<>();
-//        return msg;
-//    }
+    public MutableLiveData<UserSession> login(String email, String password){
+        final MutableLiveData<UserSession> userSessionData = new MutableLiveData<>();
+
+        apiService.login(email, password).enqueue(new Callback<JSONObject>() {
+            @Override
+            public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {
+                Log.d(TAG, "onResponse: " + response.code());
+                if (response.isSuccessful()) {
+                    if (response.body() != null) {
+                        try {
+                            Log.d(TAG, "onResponse: " + response.body());
+                            userSessionData.postValue((UserSession) response.body().get("results"));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<JSONObject> call, Throwable t) {
+
+            }
+        });
+
+        return userSessionData;
+    }
 }

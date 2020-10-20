@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -19,16 +22,18 @@ import java.util.Objects;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.model.UserSession;
 import byc.avt.avanteeborrower.usecase.login.ILoginUseCase;
 import byc.avt.avanteeborrower.usecase.login.LoginUseCase;
 import byc.avt.avanteeborrower.view.BaseActivity;
+import byc.avt.avanteeborrower.view.auth.AuthenticationViewModel;
 import byc.avt.avanteeborrower.view.auth.forgotPassword.ForgotPasswordActivity;
 import byc.avt.avanteeborrower.view.onboarding.OnBoardingActivity;
 
 public class LoginActivity extends BaseActivity<LoginUseCase> implements ILoginUseCase.Views {
 
-    @BindView(R.id.edt_log_phone)
-    TextInputLayout editPhoneNumber;
+    @BindView(R.id.edt_log_email)
+    TextInputLayout editEmailAddress;
     @BindView(R.id.edt_log_password)
     TextInputLayout editPassword;
     @BindView(R.id.btn_login)
@@ -39,6 +44,8 @@ public class LoginActivity extends BaseActivity<LoginUseCase> implements ILoginU
     Toolbar toolbar;
 
     public static String FROM_OTHER_ACTIVITY = "FROM_OTHER_ACTIVITY";
+    private String email, password;
+    private AuthenticationViewModel viewModel;
 
     @Override
     protected LoginUseCase initUseCase() {
@@ -61,13 +68,32 @@ public class LoginActivity extends BaseActivity<LoginUseCase> implements ILoginU
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        Objects.requireNonNull(editPhoneNumber.getEditText()).addTextChangedListener(loginTextWatcher);
+        viewModel = new ViewModelProvider(this).get(AuthenticationViewModel.class);
+
+        Objects.requireNonNull(editEmailAddress.getEditText()).addTextChangedListener(loginTextWatcher);
         Objects.requireNonNull(editPassword.getEditText()).addTextChangedListener(loginTextWatcher);
 
         tvForgotPassword.setOnClickListener(view -> {
             Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
             startActivity(intent);
         });
+
+        btnLogin.setOnClickListener(view -> {
+            doLogin(email, password);
+        });
+    }
+
+    private void doLogin(String email, String password) {
+
+        viewModel.login(email, password).observe(this, new Observer<UserSession>() {
+            @Override
+            public void onChanged(UserSession userSession) {
+                if (userSession != null) {
+                    showToast(userSession.getName());
+                }
+            }
+        });
+
     }
 
     private TextWatcher loginTextWatcher = new TextWatcher() {
@@ -78,46 +104,23 @@ public class LoginActivity extends BaseActivity<LoginUseCase> implements ILoginU
 
         @Override
         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            String phoneNumber = editPhoneNumber.getEditText().getText().toString().trim();
-            String password = editPassword.getEditText().getText().toString().trim();
-            btnLogin.setEnabled(!phoneNumber.isEmpty() && !password.isEmpty());
+            email = editEmailAddress.getEditText().getText().toString().trim();
+            password = editPassword.getEditText().getText().toString().trim();
+            btnLogin.setEnabled(!email.isEmpty() && !password.isEmpty());
         }
 
         @Override
         public void afterTextChanged(Editable editable) {
-
+//            btnLogin.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    useCase.doLogin(email, password);
+//                }
+//            });
         }
     };
 
-    private boolean validatePhoneNumber () {
-        String phoneNumber = editPhoneNumber.getEditText().getText().toString().trim();
 
-        if (phoneNumber.isEmpty()) {
-            editPhoneNumber.setError("Filed can't be empty");
-            return false;
-        } else {
-            editPhoneNumber.setError(null);
-            return true;
-        }
-    }
-
-    private boolean validatePassword () {
-        String password = editPassword.getEditText().getText().toString().trim();
-
-        if (password.isEmpty()) {
-            editPassword.setError("Filed can't be empty");
-            return false;
-        } else {
-            editPassword.setError(null);
-            return true;
-        }
-    }
-
-    public void confirmInput(View v) {
-        if (validatePassword() | validatePassword()) {
-
-        }
-    }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
