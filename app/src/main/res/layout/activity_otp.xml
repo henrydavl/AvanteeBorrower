@@ -54,24 +54,25 @@
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <com.mukesh.OtpView
+    <byc.avt.avanteeborrower.helper.widget.PinViewEditText
         android:id="@+id/edt_otp_code"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="40dp"
+        android:focusable="true"
         android:inputType="number"
         android:textSize="30sp"
-        android:fontFamily="@font/ibm_plex_sans_semi_bold"
-        app:itemCount="6"
-        app:itemSpacing="16dp"
-        app:itemWidth="42dp"
+        app:cursorVisible="true"
+        app:forceKeyboard="false"
+        app:hint="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_otp_sent_to"
-        app:lineColor="@color/dark"
-        app:viewType="line" />
+        app:pinBackground="@drawable/bg_white_rounded_border_grey_6"
+        app:pinHeight="45dp"
+        app:pinLength="6"
+        app:pinWidth="42dp"
+        app:splitWidth="@dimen/dimen_16" />
 
     <TextView
         android:id="@+id/tv_countdown"
@@ -100,7 +101,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/button_state_selector"
-        android:enabled="false"
+        android:enabled="true"
         android:letterSpacing="0.01"
         android:text="@string/verify"
         android:textAllCaps="false"

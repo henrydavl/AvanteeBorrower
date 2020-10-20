@@ -1,67 +1,76 @@
 package byc.avt.avanteeborrower.view.misc;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.mukesh.OtpView;
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
 
-import java.util.Objects;
-
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.helper.receiver.OTPReceiver;
+import byc.avt.avanteeborrower.helper.widget.PinViewEditText;
 import byc.avt.avanteeborrower.model.User;
+import byc.avt.avanteeborrower.usecase.otp.IOTPUseCase;
+import byc.avt.avanteeborrower.usecase.otp.OTPUseCase;
+import byc.avt.avanteeborrower.view.BaseActivity;
 
-public class OTPActivity extends AppCompatActivity {
+public class OTPActivity extends BaseActivity<OTPUseCase> implements IOTPUseCase.Views {
 
-    private TextView tvCountdown;
-    private Button btnVerify;
-    private EditText edtOTPCode;
+    @BindView(R.id.tv_countdown)
+    TextView tvCountdown;
+    @BindView(R.id.tv_otp_sent_to)
+    TextView tvSendTo;
+    @BindView(R.id.btn_verify)
+    Button btnVerify;
+    @BindView(R.id.edt_otp_code)
+    PinViewEditText otpView;
+    @BindView(R.id.otp_toolbar)
+    Toolbar toolbar;
+
     public static final String NEW_USER = "new_user";
     private User user;
-    private OtpView otpView;
+
     private CountDownTimer timer;
+
+    @Override
+    protected OTPUseCase initUseCase() {
+        return new OTPUseCase((this));
+    }
+
+    @Override
+    protected int initLayout() {
+        return R.layout.activity_otp;
+    }
 
     @SuppressLint("SetTextI18n")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_otp);
-        Toolbar bar = findViewById(R.id.otp_toolbar);
-        setSupportActionBar(bar);
-        Objects.requireNonNull(getSupportActionBar()).setHomeAsUpIndicator(R.drawable.ic_back_24px);
-        getSupportActionBar().setTitle("");
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        TextView tvSendTo = findViewById(R.id.tv_otp_sent_to);
-        tvCountdown = findViewById(R.id.tv_countdown);
-        otpView = findViewById(R.id.edt_otp_code);
+    protected void onCreated(Bundle savedInstanceState) {
+        ButterKnife.bind(this);
+
+        setSupportActionBar(toolbar);
+        if  (getSupportActionBar() != null) {
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back_24px);
+            getSupportActionBar().setTitle("");
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         if (getIntent().getParcelableExtra(NEW_USER) != null) {
             user = getIntent().getParcelableExtra(NEW_USER);
             tvSendTo.setText(getString(R.string.otp_desc) + user.getPhoneNumber());
         }
 
-        new OTPReceiver().setEditText(otpView);
+        useCase.doSendMessage(user.getPhoneNumber());
+
         setTimer();
     }
-
-    /* todo send new otp code */
-    private View.OnClickListener resendListener = view -> {
-        String msg = "Coming soon";
-        showMessage(msg);
-        setTimer();
-    };
 
     private void setTimer() {
         timer = new CountDownTimer(30000, 1000) {
@@ -77,13 +86,8 @@ public class OTPActivity extends AppCompatActivity {
             public void onFinish() {
                 tvCountdown.setEnabled(true);
                 tvCountdown.setText(getString(R.string.resend));
-                tvCountdown.setOnClickListener(resendListener);
             }
         }.start();
-    }
-
-    private void showMessage(String msg) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -93,5 +97,41 @@ public class OTPActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onCodeCorrect(boolean correct) {
+        // register and open bottom sheet
+    }
+
+    @Override
+    public void onSendFail(String msg) {
+        // retry or back to register
+    }
+
+    @Override
+    public void onSendSuccess() {
+        //listen to edit sms
+        new OTPReceiver().setEditText(otpView);
+        btnVerify.setEnabled(true);
+    }
+
+    @OnClick({
+            R.id.btn_verify,
+            R.id.tv_otp_sent_to
+    })
+    public void onClick(android.view.View view) {
+        String msg = "Coming soon";
+        switch (view.getId()) {
+            case R.id.tv_otp_sent_to:
+                /* todo send new otp code */
+                showToast(msg);
+                setTimer();
+                break;
+            case R.id.btn_verify:
+                showToast(msg);
+                useCase.doCheckCode(otpView.getValue());
+                break;
+        }
     }
 }

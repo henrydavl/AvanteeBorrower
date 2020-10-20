@@ -10,7 +10,7 @@ public class RetrofitService {
 
     public RetrofitService() {
         apiService = new Retrofit.Builder()
-                .baseUrl(Constant.BASE_URL)
+                .baseUrl(Constant.BaseSetting.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(ApiService.class);

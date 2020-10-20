@@ -5,7 +5,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +17,7 @@ import java.util.Objects;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.view.sheet.SheetMessageSent;
+import byc.avt.avanteeborrower.view.btSheet.SheetMessageSent;
 
 public class ForgotPasswordActivity extends AppCompatActivity {
 
@@ -71,10 +70,6 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     private void openSheet(String phone) {
         SheetMessageSent messageSent = new SheetMessageSent(phone);
         messageSent.show(getSupportFragmentManager(), messageSent.getTag());
-    }
-
-    private void showMessage(String msg) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
     @Override
