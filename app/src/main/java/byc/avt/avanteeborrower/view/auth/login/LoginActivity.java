@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -13,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -22,7 +20,7 @@ import java.util.Objects;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.model.UserSession;
+import byc.avt.avanteeborrower.model.response.UserSession;
 import byc.avt.avanteeborrower.usecase.login.ILoginUseCase;
 import byc.avt.avanteeborrower.usecase.login.LoginUseCase;
 import byc.avt.avanteeborrower.view.BaseActivity;
@@ -85,12 +83,11 @@ public class LoginActivity extends BaseActivity<LoginUseCase> implements ILoginU
 
     private void doLogin(String email, String password) {
 
-        viewModel.login(email, password).observe(this, new Observer<UserSession>() {
-            @Override
-            public void onChanged(UserSession userSession) {
-                if (userSession != null) {
-                    showToast(userSession.getName());
-                }
+        viewModel.login(email, password).observe(this, userSession -> {
+            if (userSession != null) {
+                showToast(userSession.getName());
+            } else {
+                showToast("Login Failed");
             }
         });
 

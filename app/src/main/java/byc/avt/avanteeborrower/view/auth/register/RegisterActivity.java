@@ -25,7 +25,7 @@ import java.util.Timer;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.model.User;
+import byc.avt.avanteeborrower.model.local.User;
 import byc.avt.avanteeborrower.usecase.register.IRegisterUseCase;
 import byc.avt.avanteeborrower.usecase.register.RegisterUseCase;
 import byc.avt.avanteeborrower.view.BaseActivity;

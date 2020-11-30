@@ -2,20 +2,12 @@ package byc.avt.avanteeborrower.helper.network;
 
 import android.util.Log;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.logging.Level;
+import com.google.gson.JsonObject;
 
 import byc.avt.avanteeborrower.helper.constants.Constant;
-import byc.avt.avanteeborrower.model.UserResponse;
-import okhttp3.Interceptor;
+import byc.avt.avanteeborrower.model.response.UserResponse;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -42,9 +34,6 @@ public class RetrofitService {
         });
 
         httpClient.addInterceptor(logging);
-//        Gson gson = new GsonBuilder()
-//                .setLenient()
-//                .create();
 
         apiService = new Retrofit.Builder()
                 .baseUrl(Constant.BaseSetting.BASE_URL)
@@ -61,8 +50,7 @@ public class RetrofitService {
         return service;
     }
 
-
-    public Call<JSONObject> login(String email, String password) {
-        return apiService.login(email, password);
+    public Call<UserResponse> login(JsonObject loginInfo) {
+        return apiService.login(loginInfo);
     }
 }

@@ -1,17 +1,22 @@
 package byc.avt.avanteeborrower.view.auth;
 
+import android.app.Application;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import byc.avt.avanteeborrower.model.User;
-import byc.avt.avanteeborrower.model.UserSession;
+import byc.avt.avanteeborrower.model.local.User;
+import byc.avt.avanteeborrower.model.response.UserSession;
 
-public class AuthenticationViewModel extends ViewModel {
+public class AuthenticationViewModel extends AndroidViewModel {
     private MutableLiveData<String> isSuccess = new MutableLiveData<>();
     private AuthRepository authRepository;
 
-    public AuthenticationViewModel() {
+    public AuthenticationViewModel(@NonNull Application application) {
+        super(application);
         authRepository = AuthRepository.getInstance();
     }
 

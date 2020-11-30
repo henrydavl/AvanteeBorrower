@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower.model;
+package byc.avt.avanteeborrower.model.local;
 
 import android.os.Parcel;
 import android.os.Parcelable;

@@ -28,6 +28,7 @@ public class Constant {
     public @interface Endpoint {
         /* TODO: Universal endpoint */
         String SIGN_IN = "signin";
+        String REGISTER = "auth/register";
 
         /* TODO: Master data endpoint */
         String COUNTRY = "country";
@@ -42,19 +43,14 @@ public class Constant {
 
         /* TODO: Borrower endpoint */
         String DASHBOARD = "borrower/dashboard";
-        String DOCUMENT = BaseSetting.BASE_URL + "borrower/document";
+        String DOCUMENT = "borrower/document";
     }
 
-//    public static final Map<String, String> API_ACCESS(){
-//        Map<String, String> header = new HashMap<>();
-//        header.put("Content-Type: ", TYPE);
-//        header.put("Accept: ", TYPE);
-//        header.put("Authorization", basicAuth);
-//        header.put("X-API-KEY", X_API_KEY);
-//        return header;
-//    }
-
-//    public static final Pattern PASSWORD_PATTERN = Pattern.compile(
-//
-//    );
+    public static final Pattern PASSWORD_PATTERN = Pattern.compile("^" +
+            "(?=.*[0-9])" +         //at least has 1 number
+            "(?=.*[a-z])" +         //at least has 1 lower case letter
+            "(?=.*[A-Z])" +         //at least has 1 upper case letter
+            "(?=\\S+$)." + //no white spaces
+            "{8,12}" + //at least 8 character, max 12 character
+            "$");
 }

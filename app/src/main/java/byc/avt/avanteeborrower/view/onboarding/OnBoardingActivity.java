@@ -105,14 +105,14 @@ public class OnBoardingActivity extends AppCompatActivity {
     };
 
     private void requestCameraPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Dexter.withContext(OnBoardingActivity.this)
                     .withPermissions(
                             Manifest.permission.READ_PHONE_STATE,
                             Manifest.permission.ACCESS_FINE_LOCATION,
                             Manifest.permission.ACCESS_COARSE_LOCATION,
                             Manifest.permission.READ_PHONE_STATE,
-                            Manifest.permission.READ_PHONE_NUMBERS,
+//                            Manifest.permission.READ_PHONE_NUMBERS,
                             Manifest.permission.RECEIVE_SMS
                     )
                     .withListener(new MultiplePermissionsListener() {

@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower.model;
+package byc.avt.avanteeborrower.model.response;
 
 import com.google.gson.annotations.SerializedName;
 
