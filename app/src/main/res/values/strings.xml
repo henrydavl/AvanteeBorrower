@@ -147,7 +147,6 @@
     <string name="kuta_loan">KUTA</string>
     <string name="kuta_loan_desc">Kredit Usaha Tanpa Agunan</string>
 
-
     <!-- TODO: On boarding screen content -->
     <string name="info_heading">Informasi layanan</string>
     <string name="info_desc">Untuk sementara, layanan akan kami fokuskan kepada peminjam dengan domisili di area Jabodetabek serta memiliki ATM / Mobile / Internet Banking. Silahkan melanjutkan jika Anda memenuhi persyaratan tersebut. Terimkasih karena Anda terlah memilih untuk meminjam di Avantee.</string>
@@ -192,6 +191,19 @@
     <string name="password_changed_desc">Silakan masuk kembali menggunakan kata sandi baru Anda.</string>
     <!-- TODO: use these string => personal_data, work_info, addresses, other_family_member, bank_info, essential_document -->
 
+    <!-- TODO: Dashboard Fragment -->
+    <string name="dashboard">Dasbor</string>
+    <string name="payment">Pembayaran</string>
+    <string name="withdraw">Penarikan dana</string>
+
+    <!-- TODO: Placeholder -->
+    <string name="date_place_holder">30-11-2019 08.09</string>
+    <string name="t">T</string>
+    <string name="finish_loan_place_holder">Rp 0</string>
+    <string name="total_loan_place_holder">0</string>
+    <string name="info">info</string>
+    <string name="amount_place_holder">- Rp 9.550.000</string>
+
     <!-- TODO: Misc -->
     <string name="terms_and_conditions"><b>SYARAT DAN KETENTUAN UMUM</b>\n\nDengan mengakses Situs Webs ini Anda setuju untuk terikat pada segala syarat dan ketentuan yang berhubungan dengan Situs Web ini dan materi apapun yang terkandung di dalamnya. Avantee memiliki hak untuk mengganti syarat dan ketentuan pada poin-point tertentu pada syarat dan ketentuan ini (apabila perlu) tanpa kewajiban untuk melakukan pemberitahuan terlebih dahulu.\n\nApabila Anda melanjutkan penggunaan dan akses pada Situs Web ini, Anda dianggap telah menerima dan menyetujui segala persyarat ini dan perubahan yang dilakukan. Apabila Anda tidak setuju dengan syarat dan ketentuan ini, silahkan meninggalkan Situs Web ini segera.
         \n\n<b>PENERAPAN PERSYARATAN</b>\nPersyaratan ini berlaku untuk setiap penggunaan Situs Web dan dengan mengakses dan menggunakan Situs Web maka : Anda setuju terhadap persyaratan ini; dan Ketika Anda mengakses dan menggunakan Situs Web ini untuk dan atas nama orang lain atau perusahaan (“pihak lain”), Anda telah mengkonfirmasi bahwa Anda berwenang untuk mewakili dan pada kenyataannya juga telah menyetujui persyaratan ini atas nama pihak lain yang Anda wakilkan tersebut. Pihak lain yang Anda wakilkan juga menjadi terikat untuk setuju pada persyaratan ini. Jika Anda tidak menyetujui Persyaratan ini, atau Anda tidak berwenang mengakses dan menggunakan Situs Web ini, dan Anda harus segera berhenti mengakses Situs Web ini.
@@ -214,4 +226,5 @@
     <string name="account_book">Buku rekening</string>
     <string name="current_account">Rekening koran</string>
     <string name="dummy_ver">Versi 1.0.0</string>
+    <string name="item_trans">item_trans</string>
 </resources>

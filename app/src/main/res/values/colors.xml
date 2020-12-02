@@ -24,6 +24,7 @@
     <color name="pending">#EC9512</color>
     <color name="failed">#EB364C</color>
     <color name="dark">#374553</color>
+    <color name="dark50">#80374553</color>
     <color name="white">#FFFFFF</color>
     <color name="overlay">#80374553</color>
     <color name="transparent">#00000000</color>

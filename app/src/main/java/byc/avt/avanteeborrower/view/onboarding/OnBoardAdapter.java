@@ -17,6 +17,7 @@ import java.util.Objects;
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.view.auth.login.LoginActivity;
 import byc.avt.avanteeborrower.view.auth.register.RegisterActivity;
+import byc.avt.avanteeborrower.view.main.MainActivity;
 
 public class OnBoardAdapter extends PagerAdapter {
 
@@ -72,20 +73,14 @@ public class OnBoardAdapter extends PagerAdapter {
             btnLog.setVisibility(View.GONE);
         }
 
-        btnReg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, RegisterActivity.class);
-                context.startActivity(intent);
-            }
+        btnReg.setOnClickListener(view12 -> {
+            Intent intent = new Intent(context, MainActivity.class);
+            context.startActivity(intent);
         });
 
-        btnLog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, LoginActivity.class);
-                context.startActivity(intent);
-            }
+        btnLog.setOnClickListener(view1 -> {
+            Intent intent = new Intent(context, LoginActivity.class);
+            context.startActivity(intent);
         });
         container.addView(view);
         return view;

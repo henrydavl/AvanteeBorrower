@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_trans_history"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <ImageView
+        android:id="@+id/trans_history_iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_withdraw" />
+
+    <TextView
+        android:id="@+id/trans_history_tv_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:maxLines="1"
+        android:text="@string/withdraw"
+        android:textColor="@color/dark"
+        android:textSize="15sp"
+        android:lineHeight="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/trans_history_tv_amount"
+        app:layout_constraintStart_toEndOf="@+id/trans_history_iv_icon"
+        app:layout_constraintTop_toTopOf="@+id/trans_history_iv_icon" />
+
+    <TextView
+        android:id="@+id/trans_history_tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="@string/date_place_holder"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/trans_history_iv_icon"
+        app:layout_constraintStart_toStartOf="@+id/trans_history_tv_type" />
+
+    <TextView
+        android:id="@+id/trans_history_tv_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/ibm_plex_sans_medium"
+        android:text="@string/amount_place_holder"
+        android:textColor="@color/dark"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/trans_history_tv_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/trans_history_tv_type" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

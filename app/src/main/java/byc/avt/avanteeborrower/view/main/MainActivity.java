@@ -2,10 +2,8 @@ package byc.avt.avanteeborrower.view.main;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -19,27 +17,23 @@ import byc.avt.avanteeborrower.view.main.notification.NotificationFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment fragment;
-            switch (item.getItemId()) {
-                case R.id.nav_dashboard:
-                    fragment = new DashboardFragment();
-                    loadFragment(fragment);
-                    return true;
-                case R.id.nav_loan:
-                    fragment = new LoanFragment();
-                    loadFragment(fragment);
-                    return true;
-                case R.id.nav_notification:
-                    fragment = new NotificationFragment();
-                    loadFragment(fragment);
-                    return true;
-            }
-            return false;
+    private final BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = item -> {
+        Fragment fragment;
+        switch (item.getItemId()) {
+            case R.id.nav_dashboard:
+                fragment = new DashboardFragment();
+                loadFragment(fragment);
+                return true;
+            case R.id.nav_loan:
+                fragment = new LoanFragment();
+                loadFragment(fragment);
+                return true;
+            case R.id.nav_notification:
+                fragment = new NotificationFragment();
+                loadFragment(fragment);
+                return true;
         }
+        return false;
     };
 
     private void loadFragment(Fragment fragment) {

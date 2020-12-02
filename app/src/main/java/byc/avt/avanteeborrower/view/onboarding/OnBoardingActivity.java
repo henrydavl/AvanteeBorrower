@@ -49,12 +49,7 @@ public class OnBoardingActivity extends AppCompatActivity {
             }
         }
 
-        btnSkip.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBoardPager.setCurrentItem(board_heading.length);
-            }
-        });
+        btnSkip.setOnClickListener(view -> onBoardPager.setCurrentItem(board_heading.length));
 
         requestCameraPermission();
     }

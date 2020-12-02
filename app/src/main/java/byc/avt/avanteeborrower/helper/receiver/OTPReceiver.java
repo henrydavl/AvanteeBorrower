@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.provider.Telephony;
 import android.telephony.SmsMessage;
 
-import com.mukesh.OtpView;
-
 import byc.avt.avanteeborrower.helper.widget.PinViewEditText;
 
 public class OTPReceiver extends BroadcastReceiver {

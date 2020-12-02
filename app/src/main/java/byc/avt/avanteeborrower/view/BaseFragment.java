@@ -31,7 +31,7 @@ public abstract class BaseFragment<T extends BaseUseCase> extends Fragment {
         return visibilityCount;
     }
 
-    public boolean isFirstVisibile() {
+    public boolean isFirstVisible() {
         System.out.println("BaseFragment::" + this.getClass().getSimpleName() + " --> isFirstVisibile --> visibilityCount : " + visibilityCount);
         return visibilityCount == 1;
     }
