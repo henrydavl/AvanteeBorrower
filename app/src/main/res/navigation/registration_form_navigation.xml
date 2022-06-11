@@ -16,8 +16,8 @@
     <fragment
         android:id="@+id/personalDataFragment"
         android:name="byc.avt.avanteeborrower.view.registration.forms.PersonalDataFragment"
-        android:label="fragment_personal_data"
-        tools:layout="@layout/fragment_personal_data" >
+        android:label="@string/personal_data"
+        tools:layout="@layout/fragment_personal_data">
         <action
             android:id="@+id/actionWelcome"
             app:destination="@id/welcomeFragment" />
@@ -28,8 +28,8 @@
     <fragment
         android:id="@+id/workInfoFragment"
         android:name="byc.avt.avanteeborrower.view.registration.forms.WorkInfoFragment"
-        android:label="fragment_work_info"
-        tools:layout="@layout/fragment_work_info" >
+        android:label="@string/work_info"
+        tools:layout="@layout/fragment_work_info">
         <action
             android:id="@+id/actionPersonalData"
             app:destination="@id/personalDataFragment" />
@@ -40,8 +40,8 @@
     <fragment
         android:id="@+id/addressDataFragment"
         android:name="byc.avt.avanteeborrower.view.registration.forms.AddressDataFragment"
-        android:label="fragment_address_data"
-        tools:layout="@layout/fragment_address_data" >
+        android:label="@string/addresses"
+        tools:layout="@layout/fragment_address_data">
         <action
             android:id="@+id/actionBackToWork"
             app:destination="@id/workInfoFragment" />
@@ -52,8 +52,8 @@
     <fragment
         android:id="@+id/otherFamilyFragment"
         android:name="byc.avt.avanteeborrower.view.registration.forms.OtherFamilyFragment"
-        android:label="fragment_other_family"
-        tools:layout="@layout/fragment_other_family" >
+        android:label="@string/other_family_member"
+        tools:layout="@layout/fragment_other_family">
         <action
             android:id="@+id/actionBackToAddress"
             app:destination="@id/addressDataFragment" />
@@ -64,8 +64,8 @@
     <fragment
         android:id="@+id/bankInfoFragment"
         android:name="byc.avt.avanteeborrower.view.registration.forms.BankInfoFragment"
-        android:label="fragment_bank_info"
-        tools:layout="@layout/fragment_bank_info" >
+        android:label="@string/bank_info"
+        tools:layout="@layout/fragment_bank_info">
         <action
             android:id="@+id/actionDocument"
             app:destination="@id/documentFragment" />
@@ -76,8 +76,8 @@
     <fragment
         android:id="@+id/documentFragment"
         android:name="byc.avt.avanteeborrower.view.registration.forms.DocumentFragment"
-        android:label="fragment_document"
-        tools:layout="@layout/fragment_document" >
+        android:label="@string/essential_document"
+        tools:layout="@layout/fragment_document">
         <action
             android:id="@+id/actionBackToBank"
             app:destination="@id/bankInfoFragment" />

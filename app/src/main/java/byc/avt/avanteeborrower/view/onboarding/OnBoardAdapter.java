@@ -16,8 +16,7 @@ import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.view.auth.login.LoginActivity;
-import byc.avt.avanteeborrower.view.auth.register.RegisterActivity;
-import byc.avt.avanteeborrower.view.main.MainActivity;
+import byc.avt.avanteeborrower.view.registration.RegistrationFormActivity;
 
 public class OnBoardAdapter extends PagerAdapter {
 
@@ -57,8 +56,8 @@ public class OnBoardAdapter extends PagerAdapter {
         ImageView obImage = view.findViewById(R.id.ob_image);
         TextView obTitle = view.findViewById(R.id.ob_title);
         TextView obDesc = view.findViewById(R.id.ob_desc);
-        Button btnReg = view.findViewById(R.id.ob_btn_reg);
         Button btnLog = view.findViewById(R.id.ob_btn_log);
+        TextView btnReg = view.findViewById(R.id.ob_btn_reg);
 
         obImage.setImageResource(board_images[position]);
         obTitle.setText(board_heading[position]);
@@ -73,15 +72,16 @@ public class OnBoardAdapter extends PagerAdapter {
             btnLog.setVisibility(View.GONE);
         }
 
-        btnReg.setOnClickListener(view12 -> {
-            Intent intent = new Intent(context, MainActivity.class);
-            context.startActivity(intent);
-        });
-
         btnLog.setOnClickListener(view1 -> {
             Intent intent = new Intent(context, LoginActivity.class);
             context.startActivity(intent);
         });
+
+        btnReg.setOnClickListener(view12 -> {
+            Intent intent = new Intent(context, RegistrationFormActivity.class);
+            context.startActivity(intent);
+        });
+
         container.addView(view);
         return view;
     }

@@ -31,7 +31,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/full_name"
-                    android:inputType="text" />
+                    android:inputType="textPersonName"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:background="@color/lightest_neutral" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -52,7 +55,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/gender"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:background="@color/lightest_neutral" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,7 +79,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/marriage_status"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:background="@color/lightest_neutral"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,7 +103,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/birth_place"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:background="@color/lightest_neutral"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -115,7 +127,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/date_of_birth"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:background="@color/lightest_neutral"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -136,7 +151,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/religion"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:background="@color/lightest_neutral"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -157,7 +175,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/last_education"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:background="@color/lightest_neutral"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -178,7 +199,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/home_phone_number"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:background="@color/lightest_neutral"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 

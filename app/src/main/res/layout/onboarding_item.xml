@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:paddingTop="50dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -62,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ob_title" />
 
     <Button
-        android:id="@+id/ob_btn_reg"
+        android:id="@+id/ob_btn_log"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="50dp"
@@ -70,7 +71,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/button_green"
-        android:text="@string/register"
+        android:text="@string/login"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:fontFamily="@font/ibm_plex_sans_medium"
@@ -79,20 +80,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ob_title" />
 
-    <Button
-        android:id="@+id/ob_btn_log"
+    <TextView
+        android:id="@+id/ob_btn_reg"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/login"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/register"
+        android:textAlignment="center"
         android:textColor="@color/colorPrimary"
-        android:textAllCaps="false"
+        android:focusable="true"
+        android:clickable="true"
         android:fontFamily="@font/ibm_plex_sans_medium"
-        android:textSize="18sp"
-        android:background="@drawable/button_white"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        app:layout_constraintEnd_toEndOf="@+id/ob_btn_reg"
-        app:layout_constraintStart_toStartOf="@+id/ob_btn_reg"
-        app:layout_constraintTop_toBottomOf="@+id/ob_btn_reg" />
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/ob_btn_log"
+        app:layout_constraintStart_toStartOf="@+id/ob_btn_log"
+        app:layout_constraintTop_toBottomOf="@+id/ob_btn_log" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

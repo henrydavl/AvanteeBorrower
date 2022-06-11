@@ -1,7 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/lightest_neutral</item>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>\
+        <item name="backgroundColor">@color/lightest_neutral</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/lightest_neutral</item>
@@ -32,16 +33,7 @@
         <item name="android:textColor">@color/dark</item>
     </style>
 
-    <style name="AppThemeWithActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/lightest_neutral</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground">@color/lightest_neutral</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
-        <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
-    </style>
-
-    <style name="ToolbarTheme" parent="Widget.AppCompat.Light.ActionBar">
+    <style name="ToolbarTheme.Expanded" parent="Widget.AppCompat.Light.ActionBar">
         <item name="android:textColor">@color/dark</item>
         <item name="android:padding">0dp</item>
         <item name="android:layout_margin">0dp</item>
@@ -52,7 +44,7 @@
         <item name="android:background">@color/lightest_neutral</item>
     </style>
 
-    <style name="ToolbarTheme.Expanded" parent="Widget.AppCompat.Light.ActionBar">
+    <style name="ToolbarTheme" parent="Widget.AppCompat.Light.ActionBar">
         <item name="android:textColor">@color/dark</item>
         <item name="android:padding">0dp</item>
         <item name="android:layout_margin">0dp</item>
@@ -80,22 +72,15 @@
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
     </style>
 
-    <style name="OnBoardTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="android:windowBackground">@color/colorPrimaryDark</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    <style name="BottomNavigationViewStyle">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">11sp</item>
     </style>
 
     <style name="CheckboxTheme" parent="Theme.AppCompat.Light">
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:fontFamily">@font/ibm_plex_sans</item>
         <item name="android:textColorSecondary">@color/dark</item>
-    </style>
-
-    <style name="BottomNavigationViewStyle">
-        <item name="android:textAllCaps">true</item>
-        <item name="android:textSize">11sp</item>
     </style>
 
     <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">

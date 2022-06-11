@@ -8,7 +8,7 @@
     <string name="member_of">Anggota dari</string>
 
     <!-- TODO: Authentication Register -->
-    <string name="register">Daftar</string>
+    <string name="register">Belum punya akun? Daftar!</string>
     <string name="email">Email Address</string>
     <string name="referral_id">Referral ID (opsional)</string>
     <string name="ive_read">Saya telah membaca dan setuju dengan</string>

@@ -19,39 +19,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/text_address_info"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="16dp"
-                    android:fontFamily="@font/ibm_plex_sans_semi_bold"
-                    android:text="@string/addresses"
-                    android:textColor="@color/dark"
-                    android:textSize="30sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_home_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     app:errorEnabled="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/text_address_info">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/address"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -72,7 +60,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/province"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -93,7 +84,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/city"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -114,7 +108,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/sub_district"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -135,7 +132,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/urban"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -156,7 +156,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/postal_code"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -210,7 +213,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/address"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -231,7 +237,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/province"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -252,7 +261,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/city"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -273,7 +285,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/sub_district"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -294,7 +309,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/urban"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -315,7 +333,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/postal_code"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -335,7 +356,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/home_owned_status"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -388,7 +412,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/address"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -409,7 +436,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/province"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -430,7 +460,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/city"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -451,7 +484,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/sub_district"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -472,7 +508,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/urban"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -493,7 +532,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/postal_code"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:background="@color/lightest_neutral"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
