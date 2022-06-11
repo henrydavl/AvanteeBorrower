@@ -198,11 +198,13 @@
 
     <!-- TODO: Placeholder -->
     <string name="date_place_holder">30-11-2019 08.09</string>
+    <string name="date_place_holder2">30-11-2019</string>
     <string name="t">T</string>
     <string name="finish_loan_place_holder">Rp 0</string>
     <string name="total_loan_place_holder">0</string>
     <string name="info">info</string>
     <string name="amount_place_holder">- Rp 9.550.000</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac ipsum enim. Ut vel dolor maximus, ultricies metus id, cursus sem. Fusce non varius purus. Cras scelerisque enim quis dolor ultricies, id iaculis enim egestas. </string>
 
     <!-- TODO: Misc -->
     <string name="terms_and_conditions"><b>SYARAT DAN KETENTUAN UMUM</b>\n\nDengan mengakses Situs Webs ini Anda setuju untuk terikat pada segala syarat dan ketentuan yang berhubungan dengan Situs Web ini dan materi apapun yang terkandung di dalamnya. Avantee memiliki hak untuk mengganti syarat dan ketentuan pada poin-point tertentu pada syarat dan ketentuan ini (apabila perlu) tanpa kewajiban untuk melakukan pemberitahuan terlebih dahulu.\n\nApabila Anda melanjutkan penggunaan dan akses pada Situs Web ini, Anda dianggap telah menerima dan menyetujui segala persyarat ini dan perubahan yang dilakukan. Apabila Anda tidak setuju dengan syarat dan ketentuan ini, silahkan meninggalkan Situs Web ini segera.
