@@ -2,15 +2,18 @@ package byc.avt.avanteeborrower.view.auth.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -20,15 +23,13 @@ import java.util.Objects;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.model.response.UserSession;
 import byc.avt.avanteeborrower.usecase.login.ILoginUseCase;
 import byc.avt.avanteeborrower.usecase.login.LoginUseCase;
-import byc.avt.avanteeborrower.view.BaseActivity;
 import byc.avt.avanteeborrower.view.auth.AuthenticationViewModel;
 import byc.avt.avanteeborrower.view.auth.forgotPassword.ForgotPasswordActivity;
 import byc.avt.avanteeborrower.view.onboarding.OnBoardingActivity;
 
-public class LoginActivity extends BaseActivity<LoginUseCase> implements ILoginUseCase.Views {
+public class LoginActivity extends AppCompatActivity {
 
     @BindView(R.id.edt_log_email)
     TextInputLayout editEmailAddress;
@@ -46,17 +47,9 @@ public class LoginActivity extends BaseActivity<LoginUseCase> implements ILoginU
     private AuthenticationViewModel viewModel;
 
     @Override
-    protected LoginUseCase initUseCase() {
-        return new LoginUseCase(this);
-    }
-
-    @Override
-    protected int initLayout() {
-        return R.layout.activity_login;
-    }
-
-    @Override
-    protected void onCreated(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
@@ -138,38 +131,7 @@ public class LoginActivity extends BaseActivity<LoginUseCase> implements ILoginU
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onProgressLogin() {
-
-    }
-
-    @Override
-    public void onProgressInitialData(String msg) {
-
-    }
-
-    @Override
-    public void onLoginError(String msg) {
-
-    }
-
-    @Override
-    public void onLoginSuccess() {
-
-    }
-
-    @Override
-    public void onInvalidParam(String msg) {
-
-    }
-
-    @Override
-    public void onInitialDataSuccess() {
-
-    }
-
-    @Override
-    public void onInitialDataError() {
-
+    private void showToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }

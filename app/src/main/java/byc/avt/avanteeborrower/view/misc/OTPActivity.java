@@ -6,8 +6,10 @@ import android.os.CountDownTimer;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import butterknife.BindView;
@@ -18,10 +20,8 @@ import byc.avt.avanteeborrower.helper.receiver.OTPReceiver;
 import byc.avt.avanteeborrower.helper.widget.PinViewEditText;
 import byc.avt.avanteeborrower.model.local.User;
 import byc.avt.avanteeborrower.usecase.otp.IOTPUseCase;
-import byc.avt.avanteeborrower.usecase.otp.OTPUseCase;
-import byc.avt.avanteeborrower.view.BaseActivity;
 
-public class OTPActivity extends BaseActivity<OTPUseCase> implements IOTPUseCase.Views {
+public class OTPActivity extends AppCompatActivity {
 
     @BindView(R.id.tv_countdown)
     TextView tvCountdown;
@@ -39,19 +39,11 @@ public class OTPActivity extends BaseActivity<OTPUseCase> implements IOTPUseCase
 
     private CountDownTimer timer;
 
-    @Override
-    protected OTPUseCase initUseCase() {
-        return new OTPUseCase((this));
-    }
-
-    @Override
-    protected int initLayout() {
-        return R.layout.activity_otp;
-    }
-
     @SuppressLint("SetTextI18n")
     @Override
-    protected void onCreated(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_otp);
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
@@ -67,7 +59,7 @@ public class OTPActivity extends BaseActivity<OTPUseCase> implements IOTPUseCase
             tvSendTo.setText(getString(R.string.otp_desc) + user.getPhoneNumber());
         }
 
-        useCase.doSendMessage(user.getPhoneNumber());
+        doSendMessage(user.getPhoneNumber());
 
         setTimer();
     }
@@ -99,18 +91,23 @@ public class OTPActivity extends BaseActivity<OTPUseCase> implements IOTPUseCase
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onCodeCorrect(boolean correct) {
+    private void doSendMessage(String phoneNumber) {
+
+    }
+
+    private void doCheckCode(String code) {
+
+    }
+
+    private void onCodeCorrect(boolean correct) {
         // register and open bottom sheet
     }
 
-    @Override
-    public void onSendFail(String msg) {
+    private void onSendFail(String msg) {
         // retry or back to register
     }
 
-    @Override
-    public void onSendSuccess() {
+    private void onSendSuccess() {
         //listen to edit sms
         new OTPReceiver().setEditText(otpView);
         btnVerify.setEnabled(true);
@@ -130,8 +127,12 @@ public class OTPActivity extends BaseActivity<OTPUseCase> implements IOTPUseCase
                 break;
             case R.id.btn_verify:
                 showToast(msg);
-                useCase.doCheckCode(otpView.getValue());
+                doCheckCode(otpView.getValue());
                 break;
         }
+    }
+
+    private void showToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }

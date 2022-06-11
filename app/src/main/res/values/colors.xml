@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="dot_inactive">#80909090</color>
+    <color name="dot_active">#138808</color>
+    <color name="barColor">#32FFFFFF</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_active</item>
+        <item>@color/dot_active</item>
+        <item>@color/dot_active</item>
+        <item>@color/dot_active</item>
+        <item>@color/dot_active</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+    </array>
+
+
     <color name="colorPrimaryDark">#F3F3F3</color>
-    <color name="colorAccent">#25C70B</color>
+    <color name="colorAccent">#138808</color>
     <color name="navInactive">#BEC2C7</color>
 
     <!-- Colors Accent -->
-    <color name="colorPrimary">#25C70B</color>
+    <color name="colorPrimary">#138808</color>
+    <color name="colorPrimaryO06">#9925C70B</color>
+    <color name="colorPrimaryO015">#E3FFE0</color>
     <color name="colorPrimaryA">#1DB474</color>
     <color name="colorPrimaryB">#AABE2C</color>
     <color name="colorPrimaryC">#E1B000</color>
@@ -25,17 +48,22 @@
     <color name="failed">#EB364C</color>
     <color name="dark">#374553</color>
     <color name="dark50">#80374553</color>
+    <color name="darkO05">#80374553</color>
     <color name="white">#FFFFFF</color>
+    <color name="pendingBg">#19EC9512</color>
     <color name="overlay">#80374553</color>
     <color name="transparent">#00000000</color>
 
     <!-- Background -->
     <color name="neutral">#F0D2D5DB</color>
-    <color name="light_neutral">#F0EFEFF4</color>
     <color name="lightest_neutral">#F3F3F3</color>
     <color name="bars_light_neutral">#F8F8F8</color>
     <color name="bars_light">#F0FFFFFF</color>
 
     <!-- Scrims -->
     <color name="darker">#99000000</color>
+    <color name="white_transparent_50">#80FFFFFF</color>
+    <color name="divider_color">#66E0E0E0</color>
+    <color name="white_transparent_80">#CDFFFFFF</color>
+
 </resources>

@@ -31,7 +31,7 @@ public class RegistrationFormActivity extends AppCompatActivity {
         //appBarLayout.setVisibility(View.GONE);
         Toolbar toolbar = findViewById(R.id.register_form_toolbar);
 //        setSupportActionBar(toolbar);
-        navController = Navigation.findNavController(this, R.id.register_fragment_container);
+        navController = Navigation.findNavController(this, R.id.register_form_fragment_container);
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {

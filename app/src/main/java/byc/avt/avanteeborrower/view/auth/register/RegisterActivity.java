@@ -11,8 +11,11 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -28,12 +31,11 @@ import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.model.local.User;
 import byc.avt.avanteeborrower.usecase.register.IRegisterUseCase;
 import byc.avt.avanteeborrower.usecase.register.RegisterUseCase;
-import byc.avt.avanteeborrower.view.BaseActivity;
 import byc.avt.avanteeborrower.view.auth.AuthenticationViewModel;
 import byc.avt.avanteeborrower.view.misc.OTPActivity;
 import byc.avt.avanteeborrower.view.btSheet.TermFragment;
 
-public class RegisterActivity extends BaseActivity<RegisterUseCase> implements IRegisterUseCase.Views {
+public class RegisterActivity extends AppCompatActivity {
 
     @BindView(R.id.edt_reg_phone)
     TextInputLayout editPhoneNumber;
@@ -62,17 +64,10 @@ public class RegisterActivity extends BaseActivity<RegisterUseCase> implements I
     private User user;
 
     @Override
-    protected RegisterUseCase initUseCase() {
-        return new RegisterUseCase(this);
-    }
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_register);
 
-    @Override
-    protected int initLayout() {
-        return R.layout.activity_register;
-    }
-
-    @Override
-    protected void onCreated(Bundle savedInstanceState) {
         ButterKnife.bind(this);
 
         setSupportActionBar(bar);
@@ -93,7 +88,6 @@ public class RegisterActivity extends BaseActivity<RegisterUseCase> implements I
             confirmInput();
         });
     }
-
 
     private CompoundButton.OnCheckedChangeListener showTermListener = new CompoundButton.OnCheckedChangeListener() {
         @Override
@@ -252,33 +246,7 @@ public class RegisterActivity extends BaseActivity<RegisterUseCase> implements I
         }
     }
 
-    @Override
-    public void onProgressRegister() {
-
-    }
-
-    @Override
-    public void onRegisterError(String msg) {
-
-    }
-
-    @Override
-    public void onRegisterSuccess() {
-
-    }
-
-    @Override
-    public void onParamAccepted(boolean accepted) {
-
-    }
-
-    @Override
-    public void onInvalidParam(String msg) {
-
-    }
-
-    @Override
-    public void onPhoneNumberVerified(boolean verified) {
-
+    private void showToast(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }

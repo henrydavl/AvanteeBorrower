@@ -1,4 +1,6 @@
 <resources>
+    <dimen name="dots_height">38dp</dimen>
+
     <!--margin-->
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="margin_small">4dp</dimen>
