@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/kuta_loan_request_navigation"
+    app:startDestination="@id/KUTALoanBussinessDataFragment">
+
+    <fragment
+        android:id="@+id/KUTALoanBussinessDataFragment"
+        android:name="byc.avt.avanteeborrower.view.loanApplication.KUTA.form.KUTALoanBussinessDataFragment"
+        android:label="@string/business_data"
+        tools:layout="@layout/fragment_kuta_loan_bussiness_data" />
+    <fragment
+        android:id="@+id/KUTALoanPurposeFragment"
+        android:name="byc.avt.avanteeborrower.view.loanApplication.KUTA.form.KUTALoanPurposeFragment"
+        android:label="@string/loan_purpose"
+        tools:layout="@layout/fragment_kuta_loan_purpose" />
+    <fragment
+        android:id="@+id/KUTALoanDocumentFragment"
+        android:name="byc.avt.avanteeborrower.view.loanApplication.KUTA.form.KUTALoanDocumentFragment"
+        android:label="@string/essential_document"
+        tools:layout="@layout/fragment_kuta_loan_document" />
+    <fragment
+        android:id="@+id/KUTALoanApplicationFragment2"
+        android:name="byc.avt.avanteeborrower.view.loanApplication.KUTA.form.KUTALoanApplicationFragment"
+        android:label="@string/loan_application"
+        tools:layout="@layout/fragment_kuta_loan_application" />
+    <fragment
+        android:id="@+id/KUTALoanConfirmationFragment"
+        android:name="byc.avt.avanteeborrower.view.loanApplication.KUTA.form.KUTALoanConfirmationFragment"
+        android:label="@string/confirmation"
+        tools:layout="@layout/fragment_kuta_loan_confirmation" />
+</navigation>

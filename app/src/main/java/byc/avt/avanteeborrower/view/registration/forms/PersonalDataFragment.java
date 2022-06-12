@@ -37,15 +37,10 @@ public class PersonalDataFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-//        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(getString(R.string.personal_data));
-//        ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back_24px);
         next = view.findViewById(R.id.btn_next_personal_info);
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavDirections action = PersonalDataFragmentDirections.actionWorkInfo();
-                Navigation.findNavController(next).navigate(action);
-            }
+        next.setOnClickListener(view1 -> {
+            NavDirections action = PersonalDataFragmentDirections.actionWorkInfo();
+            Navigation.findNavController(next).navigate(action);
         });
     }
 }

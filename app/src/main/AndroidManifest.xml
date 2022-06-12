@@ -37,6 +37,15 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".view.loanApplication.staff.StaffApplicationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.loanApplication.KUTA.KUTAApplicationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.loanApplication.KTA.KTAApplicationActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.settings.account.EssentialDocumentActivity"
             android:exported="false" />
         <activity

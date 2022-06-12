@@ -10,6 +10,7 @@
       <map>
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable-v24/button_disabled.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable-v24/button_grey_accent.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/bg_background_ripple.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/bg_white_rounded_8.xml" value="0.1845" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/bg_white_rounded_border_grey_6.xml" value="0.1845" />
@@ -19,8 +20,11 @@
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/checkbox_checked.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/checkbox_selector.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/checkbox_uncheck.xml" value="0.1845" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_addresses.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_adjust_13px.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_auto_invest_part.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_back_24px.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_bank_info.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_bank_transfer.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_baseline_content_copy_24.xml" value="0.204" />
@@ -31,23 +35,83 @@
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_bg_auto_invest.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_bg_round_white.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_cancel_24px.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_change_password.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_check.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_close.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_convenient.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_dashboard.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_document_green_24px.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_document_photo_circle.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_done_24.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_done_all_24.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_edit_circle.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_ess_doc.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_experienced.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_factsheet.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_faq.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_fill_form_circle.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_handle.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_history_green.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_iconuser.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_illustlogin.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_illustration_lender_walkthough_1.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_illustration_lender_walkthough_2.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_info_circle.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_institusi.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_kontrak.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_kta_loan.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_kuta_loan.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_launcher_background.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_loan.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_loan_active.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_loan_color.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_loan_paid_off.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_loan_rating_a.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_loan_rating_e.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_loan_request.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_logout.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_minus_outline.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_no_loan.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_no_notifications.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_no_transaction.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_notification_36dp.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_notification_color.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_notifications.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_ojk_logo.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_ojk_logo_black.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_other_family.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_payment.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_pencil_dark05.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_pending.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_pending_circle.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_perseorangan.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_personal_data.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_personal_data_blue.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_picture_taken.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_plus_outline.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_portfolio_24px.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_portfolio_36dp.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_portfolio_add.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_profile_bg.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_receive_white.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_reminder.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_reset_password.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_risk_info.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_saldo_danai.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_schedule_num_paid.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_schedule_num_paid_late.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_schedule_num_unpaid.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_screen_lock_portrait.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_service_info.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_sisa_2hari.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_sisa_4hari.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_take_picture.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_withdraw.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/ic_withdraw_white.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/selectable_curve.xml" value="0.204" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/drawable/text_state_selector.xml" value="0.204" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout-v28/item_trans_history.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_addresses.xml" value="0.2706214689265537" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_bank_info.xml" value="0.3541666666666667" />
@@ -55,6 +119,9 @@
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_essential_document.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_family_info.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_forgot_password.xml" value="0.3541666666666667" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_kta_application.xml" value="0.3541666666666667" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_kuta_application.xml" value="0.3541666666666667" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_loan_application.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_login.xml" value="0.3487179487179487" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_main.xml" value="0.17604166666666668" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_onboarding.xml" value="0.3541666666666667" />
@@ -64,19 +131,28 @@
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_registration_form.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_setting_account.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_splash.xml" value="0.3541666666666667" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_staff_application.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/activity_work_info.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_address_data.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_bank_info.xml" value="0.33" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_company_data.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_dashboard.xml" value="0.3487179487179487" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_document.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_f_a_q.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_info.xml" value="0.3541666666666667" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_kta_loan_document.xml" value="0.3541666666666667" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_kta_loan_purpose.xml" value="0.3541666666666667" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_kuta_loan_confirmation.xml" value="0.3541666666666667" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_kuta_loan_purpose.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_loan.xml" value="0.33" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_message.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_notification.xml" value="0.33" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_other_family.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_personal_data.xml" value="0.33" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_personal_data2.xml" value="0.34010416666666665" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_personal_data_staff_loan.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_risk_info.xml" value="0.3541666666666667" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_staff_loan_purpose.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_term.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_welcome.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/fragment_work_info.xml" value="0.33" />
@@ -85,8 +161,10 @@
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/item_message.xml" value="0.353125" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/item_onboarding.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/item_trans_history.xml" value="0.3541666666666667" />
-        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/layout_loan_types.xml" value="0.17604166666666668" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/layout_loan_types.xml" value="0.33" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/onboarding_item.xml" value="0.3541666666666667" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/sheet_bank_photo_guide.xml" value="0.3541666666666667" />
+        <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/sheet_profile_edit.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/layout/sheet_registered.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3541666666666667" />
         <entry key="..\:/Career/Baycode-Avantee/AvanteeBorrower/app/src/main/res/menu/dashboard_menu.xml" value="0.3541666666666667" />

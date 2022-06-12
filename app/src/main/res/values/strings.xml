@@ -227,7 +227,7 @@
     <string name="tips_for_photo">Petunjuk pengambilan foto</string>
     <string name="account_foto_tips">Untuk mempercepat proses verifikasi identitas Anda, mohon mengambil foto halaman depan buku rekening atau rekening koran seperti contoh berikut:</string>
     <string name="account_book">Buku rekening</string>
-    <string name="current_account">Rekening koran</string>
+    <string name="checking_account">Rekening koran</string>
     <string name="dummy_ver">Versi 1.0.0</string>
     <string name="item_trans">item_trans</string>
     <string name="img">img</string>
@@ -238,4 +238,66 @@
     <string name="message_dummy_body">Pengajuan pinjaman LN-20190916002 telah ditolak. </string>
     <string name="edit">Ubah</string>
     <string name="save_change">Simpan perubahan</string>
+
+    <!-- TODO: Staff Loan, KTA -->
+    <string name="company_data">Data perusahaan</string>
+    <string name="company_data_description">Staff Loan dikhususkan bagi karyawan dari perusahaan yang bekerjasama dengan Avantee.
+        \n\nMasukkan kode perusahaan Anda (dapat ditanyakan ke HRD) untuk mengecek status kerjasama sebelum melanjutkan ke proses selanjutnya.</string>
+    <string name="company_code">Kode perusahaan</string>
+    <string name="company_name">Nama Perusahaan</string>
+    <string name="employee_number">NIP Anda</string>
+    <string name="monthly_salary_staff_loan">Gagi per bulan Anda</string>
+    <string name="start_work_date">Mulai bekerja</string>
+    <string name="loan_purpose">Tujuan peminjaman</string>
+    <string name="loan_usage">Penggunaan pinjaman</string>
+    <string name="loan_description">Deskripsi pinjaman</string>
+    <string name="take_salary_slip_picture">Ambil foto slip gaji terakhir</string>
+    <string name="take_company_identity_card_picture">Ambil foto Kartu Identitas Perusahaan</string>
+    <string name="loan_application">Pengajuan pinjaman</string>
+    <string name="enter_loan_amount">Isi nominal pinjaman</string>
+    <string name="loan_amount_requirement">Kelipatan Rp 1.000.000</string>
+    <string name="loan_amount_requirement_desc">Maksimal dana yang dapat Anda pinjam adalah sebesar Rp 10.000.000</string>
+    <string name="choose_tenor">PILIH TENOR</string>
+    <string name="three_month">3 bulan</string>
+    <string name="interest_dummy">Bunga 1.59% per bulan</string>
+    <string name="installment">Installment</string>
+    <string name="confirmation">Konfirmasi</string>
+    <string name="confirmation_loan">Anda akan mengajukan pinjaman dengan detail sebagai berikut:</string>
+    <string name="loan_amount">Nominal pinjaman</string>
+    <string name="loan_fee">Biaya komisi dan admin</string>
+    <string name="loan_nett">Total yang akan diterima</string>
+    <string name="loan_interest">Bunga pinjaman</string>
+    <string name="loan_installment_per_month">Angsuran per bulan</string>
+    <string name="admin_fee">Biaya admin</string>
+    <string name="commission_fee">Biaya komisi</string>
+    <string name="loan_detail">Detail pinjaman</string>
+    <string name="payment_detail">Detail pembayaran</string>
+    <string name="payment_nett">Total yang harus dibayar</string>
+    <string name="loan_application_done">Pengajuan pinjaman selesai</string>
+    <string name="loan_application_done_desc">Mohon menunggu proses verifikasi pinjaman oleh tim kami.</string>
+    <string name="loan_application_pending">Pengajuan pinjaman Anda sedang dalam proses verifikasi.</string>
+    <string name="loan_status_pending">PENGAJUAN</string>
+    <string name="tenor">tenor</string>
+    <string name="tenor_paid">Telah dibayar</string>
+    <string name="tenor_left">Sisa tenor</string>
+    <string name="application_date">Tanggal pengajuan</string>
+    <string name="application_date_dummy">3 Oktober 2019</string>
+    <string name="no_info_offer"><![CDATA[Belum ada info & penawaran]]></string>
+
+    <!-- TODO: KUTA Loan -->
+    <string name="business_data">Data usaha</string>
+    <string name="business_name">Nama usaha</string>
+    <string name="business_field">Bidang usaha</string>
+    <string name="business_is_online">Usaha berbasis online?</string>
+    <string name="business_address">Alamat usaha</string>
+    <string name="business_online_form">Usaha online anda berupa:</string>
+    <string name="marketplace">Toko di marketplace</string>
+    <string name="social_media">Media sosial</string>
+    <string name="website">Website</string>
+    <string name="marketplace_name">Nama marketplace</string>
+    <string name="store_name">Nama toko Anda</string>
+    <string name="social_media_name">Nama media sosial</string>
+    <string name="sos_account_name">Nama akun anda</string>
+    <string name="website_url">Alamat situs usaha Anda</string>
+
 </resources>

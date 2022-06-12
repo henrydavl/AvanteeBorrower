@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import org.jetbrains.annotations.NotNull;
@@ -21,6 +22,9 @@ import org.jetbrains.annotations.NotNull;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.view.loanApplication.KTA.KTAApplicationActivity;
+import byc.avt.avanteeborrower.view.loanApplication.KUTA.KUTAApplicationActivity;
+import byc.avt.avanteeborrower.view.loanApplication.staff.StaffApplicationActivity;
 import byc.avt.avanteeborrower.view.settings.general.SettingActivity;
 
 /**
@@ -30,6 +34,15 @@ public class DashboardFragment extends Fragment {
 
     @BindView(R.id.toolbar_fr_dashboard)
     Toolbar toolbar;
+
+    @BindView(R.id.cv_staff_loan)
+    CardView cvStaffLoan;
+
+    @BindView(R.id.cv_kta_loan)
+    CardView cvKTALoan;
+
+    @BindView(R.id.cv_kuta_loan)
+    CardView cvKUTALoan;
 
     public DashboardFragment() {
     }
@@ -47,6 +60,21 @@ public class DashboardFragment extends Fragment {
         ButterKnife.bind(this, view);
         setHasOptionsMenu(true);
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
+
+        cvStaffLoan.setOnClickListener(v -> {
+            Intent intent = new Intent(requireActivity(), StaffApplicationActivity.class);
+            startActivity(intent);
+        });
+
+        cvKTALoan.setOnClickListener(v -> {
+            Intent intent = new Intent(requireActivity(), KTAApplicationActivity.class);
+            startActivity(intent);
+        });
+
+        cvKUTALoan.setOnClickListener(v -> {
+            Intent intent = new Intent(requireActivity(), KUTAApplicationActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/staff_loan_request_navigation"
+    app:startDestination="@id/staffLoanCompanyDataFragment">
+
+    <fragment
+        android:id="@+id/staffLoanCompanyDataFragment"
+        android:name="byc.avt.avanteeborrower.view.loanApplication.staff.form.StaffLoanCompanyDataFragment"
+        android:label="@string/company_data"
+        tools:layout="@layout/fragment_staff_loan_company_data" />
+    <fragment
+        android:id="@+id/staffLoanPersonalDataFragment"
+        android:name="byc.avt.avanteeborrower.view.loanApplication.staff.form.StaffLoanPersonalDataFragment"
+        android:label="@string/personal_data"
+        tools:layout="@layout/fragment_staff_loan_personal_data" />
+    <fragment
+        android:id="@+id/staffLoanPurposeFragment"
+        android:name="byc.avt.avanteeborrower.view.loanApplication.staff.form.StaffLoanPurposeFragment"
+        android:label="@string/loan_purpose"
+        tools:layout="@layout/fragment_staff_loan_purpose" />
+    <fragment
+        android:id="@+id/staffLoanDocumentFragment"
+        android:name="byc.avt.avanteeborrower.view.loanApplication.staff.form.StaffLoanDocumentFragment"
+        android:label="@string/essential_document"
+        tools:layout="@layout/fragment_staff_loan_document" />
+    <fragment
+        android:id="@+id/staffLoanApplicationFragment"
+        android:name="byc.avt.avanteeborrower.view.loanApplication.staff.form.StaffLoanApplicationFragment"
+        android:label="@string/loan_application"
+        tools:layout="@layout/fragment_staff_loan_application" />
+    <fragment
+        android:id="@+id/staffLoanConfirmationFragment"
+        android:name="byc.avt.avanteeborrower.view.loanApplication.staff.form.StaffLoanConfirmationFragment"
+        android:label="@string/confirmation"
+        tools:layout="@layout/fragment_staff_loan_confirmation" />
+</navigation>
