@@ -229,4 +229,5 @@
     <string name="current_account">Rekening koran</string>
     <string name="dummy_ver">Versi 1.0.0</string>
     <string name="item_trans">item_trans</string>
+    <string name="img">img</string>
 </resources>

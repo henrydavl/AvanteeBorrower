@@ -45,6 +45,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_home_province"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -56,12 +57,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edit_reg_form_home_address">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/province"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
 
@@ -69,6 +70,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_home_city"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -80,12 +82,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edit_reg_form_home_province">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/city"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
 
@@ -93,6 +95,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_home_sub_district"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -104,12 +107,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edit_reg_form_home_city">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/sub_district"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
 
@@ -117,6 +120,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_home_urban"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -128,12 +132,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edit_reg_form_home_sub_district">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/urban"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
 
@@ -155,11 +159,11 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
+                        android:background="@color/lightest_neutral"
                         android:hint="@string/postal_code"
-                        android:inputType="text"
+                        android:inputType="text|number"
                         android:paddingStart="0dp"
-                        android:paddingEnd="0dp"
-                        android:background="@color/lightest_neutral"/>
+                        android:paddingEnd="0dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -188,7 +192,8 @@
                 android:fontFamily="@font/ibm_plex_sans"
                 android:padding="10dp"
                 android:text="@string/domicile_same_as_KTP"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                app:useMaterialThemeColors="false" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cons_dom_same_as_ktp"
@@ -222,6 +227,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_dom_province"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -233,12 +239,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edit_reg_form_dom_address">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/province"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral" />
 
@@ -246,6 +252,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_dom_city"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -257,12 +264,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edit_reg_form_dom_province">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/city"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
 
@@ -270,6 +277,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_dom_sub_district"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -281,12 +289,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edit_reg_form_dom_city">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/sub_district"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
 
@@ -294,6 +302,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_dom_urban"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -305,12 +314,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edit_reg_form_dom_sub_district">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/urban"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
 
@@ -333,7 +342,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/postal_code"
-                        android:inputType="text"
+                        android:inputType="text|number"
                         android:paddingStart="0dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
@@ -341,6 +350,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_dom_home_status"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -352,12 +362,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edit_reg_form_dom_postal">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/home_owned_status"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -387,7 +397,8 @@
                 android:fontFamily="@font/ibm_plex_sans"
                 android:padding="10dp"
                 android:text="@string/work_same_as_KTP"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                app:useMaterialThemeColors="false" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cons_work_same_as_ktp"
@@ -412,7 +423,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/address"
-                        android:inputType="text"
+                        android:inputType="none"
                         android:paddingStart="0dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
@@ -421,6 +432,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_work_province"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -432,12 +444,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edit_reg_form_work_address">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/province"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
 
@@ -445,6 +457,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_work_city"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -456,12 +469,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edit_reg_form_work_province">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/city"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
 
@@ -469,6 +482,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_work_sub_district"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -480,12 +494,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edit_reg_form_work_city">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/sub_district"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
 
@@ -493,6 +507,7 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/edit_reg_form_work_urban"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -504,12 +519,12 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/edit_reg_form_work_sub_district">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <AutoCompleteTextView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/urban"
-                        android:inputType="text"
-                        android:paddingStart="0dp"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
 
@@ -532,7 +547,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:hint="@string/postal_code"
-                        android:inputType="text"
+                        android:inputType="text|number"
                         android:paddingStart="0dp"
                         android:paddingEnd="0dp"
                         android:background="@color/lightest_neutral"/>
@@ -545,7 +560,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/next"
                 android:textColor="@android:color/transparent" />

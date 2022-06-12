@@ -3,5 +3,5 @@
     <item android:drawable="@drawable/button_white" android:state_enabled="true" />
     <item android:drawable="@drawable/button_disabled" android:state_enabled="false" />
     <!-- default state-->
-    <item android:drawable="@drawable/button_white" />
+    <item android:drawable="@drawable/button_green" />
 </selector>

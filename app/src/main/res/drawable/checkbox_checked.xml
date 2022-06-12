@@ -11,7 +11,7 @@
         android:right="2dp"
         android:top="2dp"
         android:drawable="@drawable/ic_check"
-        android:width="20dp"
-        android:height="20dp">
+        android:width="18dp"
+        android:height="18dp">
     </item>
 </layer-list>
