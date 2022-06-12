@@ -15,9 +15,10 @@
             android:layout_width="match_parent"
             android:layout_height="96dp"
             android:fitsSystemWindows="true"
-            android:theme="@style/ToolbarTheme"
+            android:theme="@style/ToolbarTheme.Expanded"
+            app:collapsedTitleTextAppearance="@style/ToolbarTheme.Collapsed"
+            app:expandedTitleTextAppearance="@style/ToolbarTheme.Expanded"
             app:expandedTitleMargin="16dp"
-            app:expandedTitleTextAppearance="@color/dark"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:layout_scrollInterpolator="@android:anim/decelerate_interpolator">
 
@@ -30,7 +31,6 @@
                 app:contentInsetStart="0dp"
                 app:layout_collapseMode="pin"
                 app:title="@string/login"
-                app:titleTextAppearance="@style/ToolbarTheme"
                 app:titleTextColor="@color/dark" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -64,7 +64,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/email"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:background="@color/lightest_neutral"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:scrollbars="vertical" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,7 +90,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/password"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:background="@color/lightest_neutral"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

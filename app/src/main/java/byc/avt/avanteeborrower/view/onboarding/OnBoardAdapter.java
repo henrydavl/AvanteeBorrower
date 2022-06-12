@@ -16,6 +16,7 @@ import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.view.auth.login.LoginActivity;
+import byc.avt.avanteeborrower.view.main.MainActivity;
 import byc.avt.avanteeborrower.view.registration.RegistrationFormActivity;
 
 public class OnBoardAdapter extends PagerAdapter {
@@ -51,7 +52,7 @@ public class OnBoardAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = Objects.requireNonNull(layoutInflater).inflate(R.layout.onboarding_item,container, false);
+        View view = Objects.requireNonNull(layoutInflater).inflate(R.layout.item_onboarding,container, false);
 
         ImageView obImage = view.findViewById(R.id.ob_image);
         TextView obTitle = view.findViewById(R.id.ob_title);
@@ -73,7 +74,7 @@ public class OnBoardAdapter extends PagerAdapter {
         }
 
         btnLog.setOnClickListener(view1 -> {
-            Intent intent = new Intent(context, LoginActivity.class);
+            Intent intent = new Intent(context, MainActivity.class);
             context.startActivity(intent);
         });
 

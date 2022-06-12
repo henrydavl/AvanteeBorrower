@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower.view.setting;
+package byc.avt.avanteeborrower.view.settings.account;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

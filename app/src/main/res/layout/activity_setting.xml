@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightest_neutral"
-    tools:context=".view.setting.SettingActivity">
+    tools:context=".view.settings.general.SettingActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_settings"

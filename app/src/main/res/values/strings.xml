@@ -8,14 +8,15 @@
     <string name="member_of">Anggota dari</string>
 
     <!-- TODO: Authentication Register -->
-    <string name="register">Belum punya akun? Daftar!</string>
+    <string name="register_onboard">Belum punya akun? Daftar!</string>
+    <string name="register">Daftar!</string>
     <string name="email">Email Address</string>
     <string name="referral_id">Referral ID (opsional)</string>
     <string name="ive_read">Saya telah membaca dan setuju dengan</string>
     <string name="terms_and_condition">Syarat dan Ketentuan Avantee</string>
     <string name="register_as_borrower">Daftar sebagai peminjam</string>
     <string name="otp_verification">Verifikasi OTP</string>
-    <string name="otp_desc">Masukkan kode verifikasi yang telah dikirimkan melalui SMS ke&#160;</string>
+    <string name="otp_desc">Masukkan kode verifikasi yang telah dikirimkan melalui SMS ke nomor anda</string>
     <string name="resend_in">Kirim ulang kode dalam&#160;</string>
     <string name="register_success">Pendaftaran berhasil</string>
     <string name="register_success_message">Akun berhasil didaftarkan sebagai peminjam di Avantee. Silakan masuk kembali menggunakan nomor handphone dan kata sandi Anda.</string>
@@ -230,4 +231,11 @@
     <string name="dummy_ver">Versi 1.0.0</string>
     <string name="item_trans">item_trans</string>
     <string name="img">img</string>
+    <string name="info_dummy">Tips memulai pendanaan di Avantee dengan modal yang terbatas</string>
+
+    <!-- TODO: Message -->
+    <string name="message_dummy_title">PENGAJUAN PINJAMAN</string>
+    <string name="message_dummy_body">Pengajuan pinjaman LN-20190916002 telah ditolak. </string>
+    <string name="edit">Ubah</string>
+    <string name="save_change">Simpan perubahan</string>
 </resources>

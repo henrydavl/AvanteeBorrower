@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.view.setting.SettingActivity;
+import byc.avt.avanteeborrower.view.settings.general.SettingActivity;
 
 /**
  * A simple {@link Fragment} subclass.

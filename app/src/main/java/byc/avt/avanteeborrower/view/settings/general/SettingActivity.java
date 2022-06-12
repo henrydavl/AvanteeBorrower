@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower.view.setting;
+package byc.avt.avanteeborrower.view.settings.general;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,8 +16,9 @@ import androidx.cardview.widget.CardView;
 import java.util.Objects;
 
 import byc.avt.avanteeborrower.R;
+import byc.avt.avanteeborrower.view.settings.account.SettingAccountActivity;
 
-public class SettingActivity extends AppCompatActivity implements View.OnClickListener {
+public class  SettingActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     @Override

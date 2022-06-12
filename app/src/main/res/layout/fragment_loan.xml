@@ -6,26 +6,41 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
-        style="@style/ToolbarTheme"
+        android:id="@+id/appbar_fr_loan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        android:theme="@style/ToolbarTheme">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_tb_fr_loan"
             android:layout_width="match_parent"
             android:layout_height="96dp"
             android:fitsSystemWindows="true"
             android:theme="@style/ToolbarTheme"
+            app:collapsedTitleTextAppearance="@style/ToolbarTheme.Collapsed"
             app:expandedTitleMargin="16dp"
-            app:expandedTitleTextAppearance="@color/dark"
+            app:expandedTitleTextAppearance="@style/ToolbarTheme.Expanded"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:layout_scrollInterpolator="@android:anim/decelerate_interpolator">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+                android:id="@+id/toolbar_fr_loan"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize" />
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="0dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="6dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/ic_loan_color"
+                app:title="@string/loan"
+                app:titleTextAppearance="@style/ToolbarTheme"
+                app:titleTextColor="@color/dark" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>

@@ -27,6 +27,7 @@ import byc.avt.avanteeborrower.usecase.login.ILoginUseCase;
 import byc.avt.avanteeborrower.usecase.login.LoginUseCase;
 import byc.avt.avanteeborrower.view.auth.AuthenticationViewModel;
 import byc.avt.avanteeborrower.view.auth.forgotPassword.ForgotPasswordActivity;
+import byc.avt.avanteeborrower.view.main.MainActivity;
 import byc.avt.avanteeborrower.view.onboarding.OnBoardingActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -70,7 +71,9 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         btnLogin.setOnClickListener(view -> {
-            doLogin(email, password);
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+//            doLogin(email, password);
         });
     }
 

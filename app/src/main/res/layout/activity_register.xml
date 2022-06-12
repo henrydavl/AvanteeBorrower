@@ -16,22 +16,23 @@
             android:layout_width="match_parent"
             android:layout_height="96dp"
             android:fitsSystemWindows="true"
-            android:theme="@style/ToolbarTheme"
+            android:theme="@style/ToolbarTheme.Expanded"
+            app:collapsedTitleTextAppearance="@style/ToolbarTheme.Collapsed"
             app:expandedTitleMargin="16dp"
+            app:expandedTitleTextAppearance="@style/ToolbarTheme.Expanded"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
-            app:expandedTitleTextAppearance="@color/dark"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:toolbarId="@+id/register_toolbar">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/register_toolbar"
-                android:layout_height="?attr/actionBarSize"
                 android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
                 android:elevation="0dp"
                 app:contentInsetLeft="0dp"
                 app:contentInsetStart="0dp"
                 app:layout_collapseMode="pin"
                 app:title="@string/register"
-                app:titleTextAppearance="@style/ToolbarTheme"
                 app:titleTextColor="@color/dark" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -65,7 +66,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/email"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:background="@color/lightest_neutral"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,7 +90,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/phone_number"
-                    android:inputType="phone" />
+                    android:inputType="phone"
+                    android:background="@color/lightest_neutral"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,7 +116,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/password"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:background="@color/lightest_neutral"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -132,7 +142,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/retype_password"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:background="@color/lightest_neutral"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -153,7 +166,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:hint="@string/referral_id"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:background="@color/lightest_neutral"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 

@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower.view.setting.fragment;
+package byc.avt.avanteeborrower.view.settings.general.fragment;
 
 import android.os.Bundle;
 

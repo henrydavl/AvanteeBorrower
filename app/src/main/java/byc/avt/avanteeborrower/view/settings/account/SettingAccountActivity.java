@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower.view.setting;
+package byc.avt.avanteeborrower.view.settings.account;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -77,22 +77,28 @@ public class SettingAccountActivity extends AppCompatActivity implements View.On
                 startActivity(intent);
                 break;
             case R.id.cv_personal_data:
-                showMessage("View Personal data");
+                intent = new Intent(SettingAccountActivity.this, PersonalDataActivity.class);
+                startActivity(intent);
                 break;
             case R.id.cv_work_info:
-                showMessage("View work info");
+                intent = new Intent(SettingAccountActivity.this, WorkInfoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.cv_address_info:
-                showMessage("View Addresses");
+                intent = new Intent(SettingAccountActivity.this, AddressesActivity.class);
+                startActivity(intent);
                 break;
             case R.id.cv_other_fam:
-                showMessage("View other fam");
+                intent = new Intent(SettingAccountActivity.this, FamilyInfoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.cv_bank_info:
-                showMessage("View bank info");
+                intent = new Intent(SettingAccountActivity.this, BankInfoActivity.class);
+                startActivity(intent);
                 break;
             case R.id.cv_ess_doc:
-                showMessage("View ess doc");
+                intent = new Intent(SettingAccountActivity.this, EssentialDocumentActivity.class);
+                startActivity(intent);
                 break;
         }
     }

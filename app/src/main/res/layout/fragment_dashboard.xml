@@ -41,6 +41,7 @@
                 android:id="@+id/txt_initial_fr_dashboard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
                 android:text="@string/t"
                 android:textColor="@color/bars_light"
                 android:textSize="30sp"
@@ -284,7 +285,7 @@
                         android:layout_height="36dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
-
+                        android:background="@drawable/button_grey_accent"
                         android:elevation="0dp"
                         android:fontFamily="@font/ibm_plex_sans_medium"
                         android:gravity="center_horizontal|center_vertical"
@@ -293,6 +294,7 @@
                         android:text="@string/see_all"
                         android:textColor="@color/colorPrimary"
                         android:textSize="12sp"
+                        app:backgroundTint="@null"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -364,7 +366,7 @@
                         android:id="@+id/btn_see_all_info_dashboard"
                         style="?android:attr/borderlessButtonStyle"
                         android:layout_width="wrap_content"
-                        android:layout_height="26dp"
+                        android:layout_height="36dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
                         android:background="@drawable/button_grey_accent"
@@ -376,6 +378,7 @@
                         android:text="@string/see_all"
                         android:textColor="@color/colorPrimary"
                         android:textSize="12sp"
+                        app:backgroundTint="@null"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -402,7 +405,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/btn_see_all_info_dashboard"
-                        tools:listitem="@layout/item_trans_history"
+                        tools:listitem="@layout/item_info_offer"
                         tools:itemCount="5" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
