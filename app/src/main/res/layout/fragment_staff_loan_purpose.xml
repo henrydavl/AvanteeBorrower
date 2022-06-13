@@ -54,12 +54,19 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="55dp"
                     android:hint="@string/loan_description"
-                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:gravity="start"
+                    android:scrollbars="vertical"
+                    android:scrollbarStyle="insideInset"
+                    android:inputType="textMultiLine"
+                    android:maxLines="6"
                     android:paddingStart="8dp"
                     android:paddingEnd="0dp"
-                    android:background="@color/lightest_neutral" />
+                    android:background="@color/lightest_neutral"
+                    tools:ignore="RtlHardcoded" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

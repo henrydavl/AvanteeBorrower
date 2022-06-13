@@ -9,22 +9,38 @@
         android:id="@+id/KUTALoanBussinessDataFragment"
         android:name="byc.avt.avanteeborrower.view.loanApplication.KUTA.form.KUTALoanBussinessDataFragment"
         android:label="@string/business_data"
-        tools:layout="@layout/fragment_kuta_loan_bussiness_data" />
+        tools:layout="@layout/fragment_kuta_loan_bussiness_data" >
+        <action
+            android:id="@+id/action_KUTALoanBussinessDataFragment_to_KUTALoanPurposeFragment"
+            app:destination="@id/KUTALoanPurposeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/KUTALoanPurposeFragment"
         android:name="byc.avt.avanteeborrower.view.loanApplication.KUTA.form.KUTALoanPurposeFragment"
         android:label="@string/loan_purpose"
-        tools:layout="@layout/fragment_kuta_loan_purpose" />
+        tools:layout="@layout/fragment_kuta_loan_purpose" >
+        <action
+            android:id="@+id/action_KUTALoanPurposeFragment_to_KUTALoanDocumentFragment"
+            app:destination="@id/KUTALoanDocumentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/KUTALoanDocumentFragment"
         android:name="byc.avt.avanteeborrower.view.loanApplication.KUTA.form.KUTALoanDocumentFragment"
         android:label="@string/essential_document"
-        tools:layout="@layout/fragment_kuta_loan_document" />
+        tools:layout="@layout/fragment_kuta_loan_document" >
+        <action
+            android:id="@+id/action_KUTALoanDocumentFragment_to_KUTALoanApplicationFragment2"
+            app:destination="@id/KUTALoanApplicationFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/KUTALoanApplicationFragment2"
         android:name="byc.avt.avanteeborrower.view.loanApplication.KUTA.form.KUTALoanApplicationFragment"
         android:label="@string/loan_application"
-        tools:layout="@layout/fragment_kuta_loan_application" />
+        tools:layout="@layout/fragment_kuta_loan_application" >
+        <action
+            android:id="@+id/action_KUTALoanApplicationFragment2_to_KUTALoanConfirmationFragment"
+            app:destination="@id/KUTALoanConfirmationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/KUTALoanConfirmationFragment"
         android:name="byc.avt.avanteeborrower.view.loanApplication.KUTA.form.KUTALoanConfirmationFragment"

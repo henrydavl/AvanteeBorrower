@@ -248,26 +248,9 @@
     <string name="employee_number">NIP Anda</string>
     <string name="monthly_salary_staff_loan">Gagi per bulan Anda</string>
     <string name="start_work_date">Mulai bekerja</string>
-    <string name="loan_purpose">Tujuan peminjaman</string>
-    <string name="loan_usage">Penggunaan pinjaman</string>
-    <string name="loan_description">Deskripsi pinjaman</string>
     <string name="take_salary_slip_picture">Ambil foto slip gaji terakhir</string>
     <string name="take_company_identity_card_picture">Ambil foto Kartu Identitas Perusahaan</string>
-    <string name="loan_application">Pengajuan pinjaman</string>
-    <string name="enter_loan_amount">Isi nominal pinjaman</string>
-    <string name="loan_amount_requirement">Kelipatan Rp 1.000.000</string>
-    <string name="loan_amount_requirement_desc">Maksimal dana yang dapat Anda pinjam adalah sebesar Rp 10.000.000</string>
-    <string name="choose_tenor">PILIH TENOR</string>
-    <string name="three_month">3 bulan</string>
-    <string name="interest_dummy">Bunga 1.59% per bulan</string>
-    <string name="installment">Installment</string>
-    <string name="confirmation">Konfirmasi</string>
-    <string name="confirmation_loan">Anda akan mengajukan pinjaman dengan detail sebagai berikut:</string>
-    <string name="loan_amount">Nominal pinjaman</string>
-    <string name="loan_fee">Biaya komisi dan admin</string>
-    <string name="loan_nett">Total yang akan diterima</string>
-    <string name="loan_interest">Bunga pinjaman</string>
-    <string name="loan_installment_per_month">Angsuran per bulan</string>
+
     <string name="admin_fee">Biaya admin</string>
     <string name="commission_fee">Biaya komisi</string>
     <string name="loan_detail">Detail pinjaman</string>
@@ -300,4 +283,43 @@
     <string name="sos_account_name">Nama akun anda</string>
     <string name="website_url">Alamat situs usaha Anda</string>
 
+    <!-- TODO: Loan Purpose -->
+    <string name="loan_purpose">Tujuan peminjaman</string>
+    <string name="loan_usage">Penggunaan pinjaman</string>
+    <string name="loan_description">Deskripsi pinjaman</string>
+
+    <!-- TODO: Loan Application -->
+    <string name="installment">Angsuran</string>
+    <string name="loan_application">Pengajuan pinjaman</string>
+    <string name="enter_loan_amount">Isi nominal pinjaman</string>
+    <string name="loan_amount_requirement">Kelipatan Rp 1.000.000</string>
+    <string name="loan_amount_requirement_desc">Maksimal dana yang dapat Anda pinjam adalah sebesar Rp 10.000.000</string>
+    <string name="txt_rp">Rp</string>
+    <string name="choose_tenor">Pilih tenor</string>
+
+    <!-- TODO: Loan Confirmation -->
+    <string name="confirmation">Konfirmasi</string>
+    <string name="confirmation_loan">Anda akan mengajukan pinjaman dengan detail sebagai berikut:</string>
+    <string name="loan_amount">Nominal pinjaman</string>
+    <string name="loan_fee">Biaya komisi dan admin</string>
+    <string name="loan_nett">Total yang akan diterima</string>
+    <string name="loan_interest">Bunga pinjaman</string>
+    <string name="loan_installment_per_month">Angsuran per bulan</string>
+
+    <!-- TODO: Dummy Loan Data -->
+    <string name="three_month">3 bulan</string>
+    <string name="six_month">6 bulan</string>
+    <string name="nine_month">9 bulan</string>
+    <string name="twelve_month">12 bulan</string>
+    <string name="interest_dummy">Bunga 1.59% per bulan</string>
+    <string name="dummy_three_month">Rp 3.492.333</string>
+    <string name="dummy_six_month">Rp 1.825.666</string>
+    <string name="dummy_nine_month">Rp 1.270.111</string>
+    <string name="dummy_twelve_month">Rp 992.333</string>
+    <string name="dummy_interest_with_installment">6 x (1.59% x Rp 10.000.000)</string>
+    <string name="dummy_loan_amount">Rp 10.000.000</string>
+    <string name="dummy_commission">Rp 450.000</string>
+    <string name="dummy_loan_nett">Rp 9.550.000</string>
+    <string name="dummy_loan_interest">Rp 954.000</string>
+    <string name="dummy_monthly_installment">Rp 1.825.666</string>
 </resources>

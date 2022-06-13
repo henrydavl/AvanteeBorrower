@@ -9,17 +9,29 @@
         android:id="@+id/KTALoanPurposeFragment"
         android:name="byc.avt.avanteeborrower.view.loanApplication.KTA.form.KTALoanPurposeFragment"
         android:label="@string/loan_purpose"
-        tools:layout="@layout/fragment_kta_loan_purpose" />
+        tools:layout="@layout/fragment_kta_loan_purpose" >
+        <action
+            android:id="@+id/action_KTALoanPurposeFragment_to_KTALoanDocumentFragment"
+            app:destination="@id/KTALoanDocumentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/KTALoanDocumentFragment"
         android:name="byc.avt.avanteeborrower.view.loanApplication.KTA.form.KTALoanDocumentFragment"
         android:label="@string/essential_document"
-        tools:layout="@layout/fragment_kta_loan_document" />
+        tools:layout="@layout/fragment_kta_loan_document" >
+        <action
+            android:id="@+id/action_KTALoanDocumentFragment_to_KTALoanApplicationFragment"
+            app:destination="@id/KTALoanApplicationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/KTALoanApplicationFragment"
         android:name="byc.avt.avanteeborrower.view.loanApplication.KTA.form.KTALoanApplicationFragment"
         android:label="@string/loan_application"
-        tools:layout="@layout/fragment_kta_loan_application" />
+        tools:layout="@layout/fragment_kta_loan_application" >
+        <action
+            android:id="@+id/action_KTALoanApplicationFragment_to_KTALoanConfirmationFragment"
+            app:destination="@id/KTALoanConfirmationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/KTALoanConfirmationFragment"
         android:name="byc.avt.avanteeborrower.view.loanApplication.KTA.form.KTALoanConfirmationFragment"

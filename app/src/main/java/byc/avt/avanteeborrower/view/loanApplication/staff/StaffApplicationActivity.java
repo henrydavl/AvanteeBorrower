@@ -3,9 +3,11 @@ package byc.avt.avanteeborrower.view.loanApplication.staff;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.customview.widget.Openable;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -33,5 +35,28 @@ public class StaffApplicationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_staff_application);
+
+        appBarLayout = findViewById(R.id.appbar_staff_loan_form);
+        toolbarLayout = findViewById(R.id.collapsing_staff_loan_form);
+        params = (AppBarLayout.LayoutParams) toolbarLayout.getLayoutParams();
+        toolbar = findViewById(R.id.toolbar_staff_loan_form);
+        lineStep = findViewById(R.id.line_step_staff_loan);
+        regStep1 = findViewById(R.id.step1);
+        regStep2 = findViewById(R.id.step2);
+        regStep3 = findViewById(R.id.step3);
+        regStep4 = findViewById(R.id.step4);
+        regStep5 = findViewById(R.id.step5);
+        regStep6 = findViewById(R.id.step6);
+
+        navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.staff_loan_form_fragment_container);
+        if (navHostFragment != null) {
+            navController = navHostFragment.getNavController();
+        }
+        NavigationUI.setupWithNavController(toolbarLayout, toolbar, navController);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        return NavigationUI.navigateUp(navController, (Openable) null);
     }
 }

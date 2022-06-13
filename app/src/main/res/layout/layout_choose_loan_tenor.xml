@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_choose_loan_tenor"
+    android:layout_width="match_parent"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lbl_choose_loan_tenor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_medium"
+            android:text="@string/choose_tenor"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/rad_choose_tenor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:checkedButton="@id/rad_nine_month"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lbl_choose_loan_tenor"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_rad_three_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rad_three_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_rad_three_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibm_plex_sans_medium"
+                    android:text="@string/three_month"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/rad_three_month"
+                    app:layout_constraintTop_toTopOf="@+id/rad_three_month" />
+
+                <TextView
+                    android:id="@+id/tv_rad_three_month_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interest_dummy"
+                    android:textColor="@color/darkO05"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/rad_three_month"
+                    app:layout_constraintStart_toEndOf="@+id/rad_three_month"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_rad_three_month" />
+
+                <TextView
+                    android:id="@+id/tv_rad_three_month_installment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibm_plex_sans_medium"
+                    android:text="@string/dummy_three_month"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/rad_three_month" />
+
+                <TextView
+                    android:id="@+id/tv_rad_three_month_installment_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/installment"
+                    android:textColor="@color/darkO05"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/rad_three_month"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_rad_three_month" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_rad_six_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rad_six_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_rad_six_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibm_plex_sans_medium"
+                    android:text="@string/six_month"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/rad_six_month"
+                    app:layout_constraintTop_toTopOf="@+id/rad_six_month" />
+
+                <TextView
+                    android:id="@+id/tv_rad_six_month_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interest_dummy"
+                    android:textColor="@color/darkO05"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/rad_six_month"
+                    app:layout_constraintStart_toEndOf="@+id/rad_six_month"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_rad_six_month" />
+
+                <TextView
+                    android:id="@+id/tv_rad_six_month_installment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibm_plex_sans_medium"
+                    android:text="@string/dummy_six_month"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/rad_six_month" />
+
+                <TextView
+                    android:id="@+id/tv_rad_six_month_installment_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/installment"
+                    android:textColor="@color/darkO05"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/rad_six_month"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_rad_six_month" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_rad_nine_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rad_nine_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_rad_nine_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibm_plex_sans_medium"
+                    android:text="@string/nine_month"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/rad_nine_month"
+                    app:layout_constraintTop_toTopOf="@+id/rad_nine_month" />
+
+                <TextView
+                    android:id="@+id/tv_rad_nine_month_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interest_dummy"
+                    android:textColor="@color/darkO05"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/rad_nine_month"
+                    app:layout_constraintStart_toEndOf="@+id/rad_nine_month"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_rad_nine_month" />
+
+                <TextView
+                    android:id="@+id/tv_rad_nine_month_installment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibm_plex_sans_medium"
+                    android:text="@string/dummy_nine_month"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/rad_nine_month" />
+
+                <TextView
+                    android:id="@+id/tv_rad_nine_month_installment_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/installment"
+                    android:textColor="@color/darkO05"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/rad_nine_month"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_rad_nine_month" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cons_rad_twelve_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rad_twelve_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_rad_twelve_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibm_plex_sans_medium"
+                    android:text="@string/twelve_month"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/rad_twelve_month"
+                    app:layout_constraintTop_toTopOf="@+id/rad_twelve_month" />
+
+                <TextView
+                    android:id="@+id/tv_rad_twelve_month_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interest_dummy"
+                    android:textColor="@color/darkO05"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/rad_twelve_month"
+                    app:layout_constraintStart_toEndOf="@+id/rad_twelve_month"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_rad_twelve_month" />
+
+                <TextView
+                    android:id="@+id/tv_rad_twelve_month_installment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibm_plex_sans_medium"
+                    android:text="@string/dummy_twelve_month"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/rad_twelve_month" />
+
+                <TextView
+                    android:id="@+id/tv_rad_twelve_month_installment_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/installment"
+                    android:textColor="@color/darkO05"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/rad_twelve_month"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rad_twelve_month" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
