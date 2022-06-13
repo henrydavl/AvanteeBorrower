@@ -266,6 +266,7 @@
     <string name="application_date">Tanggal pengajuan</string>
     <string name="application_date_dummy">3 Oktober 2019</string>
     <string name="no_info_offer"><![CDATA[Belum ada info & penawaran]]></string>
+    <string name="dummy_company_name">PT Aneka Industri</string>
 
     <!-- TODO: KUTA Loan -->
     <string name="business_data">Data usaha</string>
@@ -305,6 +306,7 @@
     <string name="loan_nett">Total yang akan diterima</string>
     <string name="loan_interest">Bunga pinjaman</string>
     <string name="loan_installment_per_month">Angsuran per bulan</string>
+    <string name="loan_submit">Ajukan pinjaman</string>
 
     <!-- TODO: Dummy Loan Data -->
     <string name="three_month">3 bulan</string>

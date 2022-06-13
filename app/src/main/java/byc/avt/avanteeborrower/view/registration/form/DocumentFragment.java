@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower.view.registration.forms;
+package byc.avt.avanteeborrower.view.registration.form;
 
 import android.os.Bundle;
 
@@ -15,7 +15,6 @@ import android.widget.ImageView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.view.settings.account.SettingAccountActivity;
 
 /**
  * A simple {@link Fragment} subclass.

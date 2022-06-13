@@ -6,7 +6,7 @@
     app:startDestination="@id/welcomeFragment">
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="byc.avt.avanteeborrower.view.registration.forms.WelcomeFragment"
+        android:name="byc.avt.avanteeborrower.view.registration.form.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/personalDataFragment"
-        android:name="byc.avt.avanteeborrower.view.registration.forms.PersonalDataFragment"
+        android:name="byc.avt.avanteeborrower.view.registration.form.PersonalDataFragment"
         android:label="@string/personal_data"
         tools:layout="@layout/fragment_personal_data">
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/workInfoFragment"
-        android:name="byc.avt.avanteeborrower.view.registration.forms.WorkInfoFragment"
+        android:name="byc.avt.avanteeborrower.view.registration.form.WorkInfoFragment"
         android:label="@string/work_info"
         tools:layout="@layout/fragment_work_info">
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/addressDataFragment"
-        android:name="byc.avt.avanteeborrower.view.registration.forms.AddressDataFragment"
+        android:name="byc.avt.avanteeborrower.view.registration.form.AddressDataFragment"
         android:label="@string/addresses"
         tools:layout="@layout/fragment_address_data">
         <action
@@ -51,7 +51,7 @@
     </fragment>
     <fragment
         android:id="@+id/otherFamilyFragment"
-        android:name="byc.avt.avanteeborrower.view.registration.forms.OtherFamilyFragment"
+        android:name="byc.avt.avanteeborrower.view.registration.form.OtherFamilyFragment"
         android:label="@string/other_family_member"
         tools:layout="@layout/fragment_other_family">
         <action
@@ -63,7 +63,7 @@
     </fragment>
     <fragment
         android:id="@+id/bankInfoFragment"
-        android:name="byc.avt.avanteeborrower.view.registration.forms.BankInfoFragment"
+        android:name="byc.avt.avanteeborrower.view.registration.form.BankInfoFragment"
         android:label="@string/bank_info"
         tools:layout="@layout/fragment_bank_info">
         <action
@@ -75,7 +75,7 @@
     </fragment>
     <fragment
         android:id="@+id/documentFragment"
-        android:name="byc.avt.avanteeborrower.view.registration.forms.DocumentFragment"
+        android:name="byc.avt.avanteeborrower.view.registration.form.DocumentFragment"
         android:label="@string/essential_document"
         tools:layout="@layout/fragment_document">
         <action

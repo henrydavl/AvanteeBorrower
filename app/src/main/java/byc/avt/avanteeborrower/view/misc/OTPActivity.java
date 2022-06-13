@@ -19,7 +19,6 @@ import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.helper.receiver.OTPReceiver;
 import byc.avt.avanteeborrower.helper.widget.PinViewEditText;
 import byc.avt.avanteeborrower.model.local.User;
-import byc.avt.avanteeborrower.usecase.otp.IOTPUseCase;
 
 public class OTPActivity extends AppCompatActivity {
 

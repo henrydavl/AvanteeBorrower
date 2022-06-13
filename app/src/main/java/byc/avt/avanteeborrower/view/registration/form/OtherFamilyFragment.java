@@ -1,4 +1,4 @@
-package byc.avt.avanteeborrower.view.registration.forms;
+package byc.avt.avanteeborrower.view.registration.form;
 
 import android.os.Bundle;
 
@@ -18,11 +18,11 @@ import byc.avt.avanteeborrower.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BankInfoFragment extends Fragment {
+public class OtherFamilyFragment extends Fragment {
 
     private Button next;
 
-    public BankInfoFragment() {
+    public OtherFamilyFragment() {
         // Required empty public constructor
     }
 
@@ -31,18 +31,18 @@ public class BankInfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bank_info, container, false);
+        return inflater.inflate(R.layout.fragment_other_family, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 //        ((AppCompatActivity)getActivity()).getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back_24px);
-        next = view.findViewById(R.id.btn_next_bank_info);
+        next = view.findViewById(R.id.btn_next_other_fam_info);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavDirections action = BankInfoFragmentDirections.actionDocument();
+                NavDirections action = OtherFamilyFragmentDirections.actionBankInfo();
                 Navigation.findNavController(next).navigate(action);
             }
         });

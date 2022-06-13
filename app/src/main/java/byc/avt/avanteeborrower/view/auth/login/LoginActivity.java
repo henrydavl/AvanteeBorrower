@@ -2,7 +2,6 @@ package byc.avt.avanteeborrower.view.auth.login;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
@@ -23,8 +22,6 @@ import java.util.Objects;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.usecase.login.ILoginUseCase;
-import byc.avt.avanteeborrower.usecase.login.LoginUseCase;
 import byc.avt.avanteeborrower.view.auth.AuthenticationViewModel;
 import byc.avt.avanteeborrower.view.auth.forgotPassword.ForgotPasswordActivity;
 import byc.avt.avanteeborrower.view.main.MainActivity;

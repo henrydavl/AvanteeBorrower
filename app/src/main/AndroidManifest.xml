@@ -38,46 +38,84 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".view.loanApplication.staff.StaffApplicationActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".view.loanApplication.KUTA.KUTAApplicationActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".view.loanApplication.KTA.KTAApplicationActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".view.settings.account.EssentialDocumentActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".view.settings.account.BankInfoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".view.settings.account.FamilyInfoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".view.settings.account.AddressesActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".view.settings.account.WorkInfoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".view.settings.account.PersonalDataActivity"
-            android:exported="false" />
-        <activity android:name=".view.settings.account.SettingAccountActivity" />
-        <activity android:name=".view.settings.account.ChangePasswordActivity" />
-        <activity android:name=".view.settings.general.SettingActivity" />
-        <activity android:name=".view.auth.forgotPassword.ForgotPasswordActivity" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".view.settings.account.SettingAccountActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".view.settings.account.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".view.settings.general.SettingActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity android:name=".view.auth.forgotPassword.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <activity android:name=".camera.CameraActivity" />
         <activity
             android:name=".view.registration.RegistrationFormActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".view.misc.OTPActivity" />
-        <activity android:name=".view.misc.NoticeActivity" />
-        <activity android:name=".view.auth.register.RegisterActivity" />
-        <activity android:name=".view.auth.login.LoginActivity" />
-        <activity android:name=".view.onboarding.OnBoardingActivity" />
-        <activity android:name=".view.main.MainActivity" />
+        <activity android:name=".view.misc.OTPActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".view.misc.NoticeActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".view.auth.register.RegisterActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".view.auth.login.LoginActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".view.onboarding.OnBoardingActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".view.main.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".view.misc.SplashActivity"
             android:screenOrientation="portrait"

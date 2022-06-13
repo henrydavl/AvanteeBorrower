@@ -1,4 +1,4 @@
- package byc.avt.avanteeborrower.view.registration.forms;
+ package byc.avt.avanteeborrower.view.registration.form;
 
 import android.os.Bundle;
 

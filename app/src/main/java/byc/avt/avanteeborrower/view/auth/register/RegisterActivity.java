@@ -29,11 +29,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import byc.avt.avanteeborrower.R;
 import byc.avt.avanteeborrower.model.local.User;
-import byc.avt.avanteeborrower.usecase.register.IRegisterUseCase;
-import byc.avt.avanteeborrower.usecase.register.RegisterUseCase;
 import byc.avt.avanteeborrower.view.auth.AuthenticationViewModel;
-import byc.avt.avanteeborrower.view.misc.OTPActivity;
 import byc.avt.avanteeborrower.view.btSheet.TermFragment;
+import byc.avt.avanteeborrower.view.misc.OTPActivity;
 
 public class RegisterActivity extends AppCompatActivity {
 

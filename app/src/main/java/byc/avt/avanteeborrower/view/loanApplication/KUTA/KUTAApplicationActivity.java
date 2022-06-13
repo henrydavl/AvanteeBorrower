@@ -11,6 +11,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import com.google.android.material.appbar.AppBarLayout;
@@ -35,6 +36,7 @@ public class KUTAApplicationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kuta_application);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 
         appBarLayout = findViewById(R.id.appbar_kuta_loan_form);
         toolbarLayout = findViewById(R.id.collapsing_kuta_loan_form);

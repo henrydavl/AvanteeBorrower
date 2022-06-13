@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/KUTALoanBussinessDataFragment"
-        android:name="byc.avt.avanteeborrower.view.loanApplication.KUTA.form.KUTALoanBussinessDataFragment"
+        android:name="byc.avt.avanteeborrower.view.loanApplication.KUTA.form.KUTALoanBusinessDataFragment"
         android:label="@string/business_data"
-        tools:layout="@layout/fragment_kuta_loan_bussiness_data" >
+        tools:layout="@layout/fragment_kuta_loan_business_data" >
         <action
             android:id="@+id/action_KUTALoanBussinessDataFragment_to_KUTALoanPurposeFragment"
             app:destination="@id/KUTALoanPurposeFragment" />

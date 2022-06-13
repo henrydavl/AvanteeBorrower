@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import byc.avt.avanteeborrower.R;
-import byc.avt.avanteeborrower.view.registration.forms.AddressDataFragmentDirections;
 
 public class KTALoanPurposeFragment extends Fragment {
 

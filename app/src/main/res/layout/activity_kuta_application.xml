@@ -25,7 +25,7 @@
             app:collapsedTitleTextAppearance="@style/ToolbarTheme.Collapsed"
             app:expandedTitleMargin="16dp"
             app:expandedTitleTextAppearance="@style/ToolbarTheme.Expanded"
-            app:layout_scrollFlags="exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar_kuta_loan_form"

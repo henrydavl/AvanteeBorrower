@@ -1,18 +1,22 @@
 package byc.avt.avanteeborrower.view.loanApplication.staff.form;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import androidx.navigation.NavDirections;
+import androidx.navigation.Navigation;
 
 import byc.avt.avanteeborrower.R;
 
 public class StaffLoanCompanyDataFragment extends Fragment {
+
+    private Button next;
 
     public StaffLoanCompanyDataFragment() {
         // Required empty public constructor
@@ -33,6 +37,15 @@ public class StaffLoanCompanyDataFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        next = view.findViewById(R.id.btn_next_staff_company_data);
+        next.setOnClickListener(nextForm);
     }
+
+    private final View.OnClickListener nextForm = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            NavDirections action = StaffLoanCompanyDataFragmentDirections.actionStaffLoanCompanyDataFragmentToStaffLoanPersonalDataFragment();
+            Navigation.findNavController(next).navigate(action);
+        }
+    };
 }
