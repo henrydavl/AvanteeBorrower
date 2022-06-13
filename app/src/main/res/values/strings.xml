@@ -259,8 +259,8 @@
     <string name="loan_application_done">Pengajuan pinjaman selesai</string>
     <string name="loan_application_done_desc">Mohon menunggu proses verifikasi pinjaman oleh tim kami.</string>
     <string name="loan_application_pending">Pengajuan pinjaman Anda sedang dalam proses verifikasi.</string>
-    <string name="loan_status_pending">PENGAJUAN</string>
-    <string name="tenor">tenor</string>
+    <string name="loan_status_pending">Pengajuan</string>
+    <string name="tenor">Tenor</string>
     <string name="tenor_paid">Telah dibayar</string>
     <string name="tenor_left">Sisa tenor</string>
     <string name="application_date">Tanggal pengajuan</string>
@@ -324,4 +324,23 @@
     <string name="dummy_loan_nett">Rp 9.550.000</string>
     <string name="dummy_loan_interest">Rp 954.000</string>
     <string name="dummy_monthly_installment">Rp 1.825.666</string>
+    
+    <!-- TODO: Loan Active -->
+    <string name="fundraise">Penggalangan dana</string>
+    <string name="dummy_time_left">7 hari lagi</string>
+    <string name="fund_collected">Terkumupul</string>
+    <string name="dummy_fund_collected">Rp 2.000.000</string>
+    <string name="dummy_fund_collected_percentage">20%</string>
+    <string name="withdrawal">Tarik dana</string>
+    <string name="schedule">Jadwal</string>
+    <string name="payment_method">Metode pembayaran</string>
+    <string name="dummy_loan_id">LN-20190828001</string>
+
+    <string name="month">bulan</string>
+    <string name="dummy_tenor">6</string>
+    <string name="dummy_tenor_paid">0</string>
+    <string name="dummy_tenor_left">6</string>
+    <string name="installment_interest_per_month">Angsuran/bunga PER BULAN</string>
+    <string name="installment_due">Batas pembayaran</string>
+    <string name="payment_nett_dummy">Rp 10.954.000</string>
 </resources>
